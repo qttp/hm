@@ -1,0 +1,714 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="content-language" lang="zh-CN">
+        <title>
+            首页-爱奇艺钱包
+        </title>
+        <link type="text/css" rel="stylesheet" href="css/custom-wallet.css">
+        <script type="text/javascript" src="js/sea1.2.js">
+        </script>
+    </head>
+    
+    <body class="qypage-1180">
+        <!-- 导航 开始 -->
+        <div class="payHead">
+            <div class="payHeadCon">
+                <!-- 导航右侧 -->
+                <div class="payHeadRt">
+                    <!-- 当前账号 -->
+                    <div class="payAccound">
+                        当前账号：
+                        <a href="javascript:;" class="payUserName">
+                            zhangxiaowen007
+                        </a>
+                    </div>
+                    <div class="paySplitLine">
+                        |
+                    </div>
+                    <!-- 客服热线 -->
+                    <div class="payService">
+                        客服热线：
+                        <span>
+                            400-923-7171
+                        </span>
+                    </div>
+                </div>
+                <!-- 导航左侧 -->
+                <div class="payHeadLt">
+                    <div class="payLogo">
+                        <a href="http://www.iqiyi.com/" target="_blank">
+                        </a>
+                    </div>
+                    <div class="payDot">
+                        <h2>
+                            <a href="https://payweb.iqiyi.com/mywallet.html">
+                                爱奇艺钱包
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 导航 结束 -->
+        <!-- 导航响应式 -->
+        <script type="text/javascript">
+            window.Q = window.Q || {};
+            Q.PageInfo = Q.PageInfo || {};
+            Q.PageInfo.respInfo = {
+                cnf: [{
+                    layout: 0,
+                    cls: 'qypage-980',
+                    range: {
+                        min: 0,
+                        max: 1259
+                    }
+                },
+                {
+                    layout: 1,
+                    cls: 'qypage-1180',
+                    range: {
+                        min: 1259,
+                        max: Number.MAX_VALUE
+                    }
+                }],
+                curLayout: 1
+            }
+        </script>
+        <script>
+            (function() {
+                var body = Q.$('body');
+                var width = Q.page.getViewWidth() > Q.page.getWidth() ? Q.page.getWidth() : Q.page.getViewWidth();
+                if (Q && Q.PageInfo && Q.PageInfo.respInfo) {
+
+                    var cnf = Q.PageInfo.respInfo.cnf;
+                    body.removeClass(cnf[Q.PageInfo.respInfo.curLayout].cls);
+                    for (var i = 0; i < cnf.length; i++) {
+                        if (width >= cnf[i].range.min && width <= cnf[i].range.max && !body.hasClass(cnf[i].cls)) {
+                            body.addClass(cnf[i].cls);
+                            Q.PageInfo.respInfo.curLayout = cnf[i].layout;
+                            break;
+                        }
+                    }
+                }
+            })();
+        </script>
+        <!-- 内容区 开始 -->
+        <div class="qy_main">
+            <div class="main_inner" data-widget-maincontent="maincontent">
+                <!-- 关闭左侧菜单栏 pt15 追加 custom-main-left-close-->
+                <div class="pt15" id="uc-main">
+                    <div class="custom-main-outer" data-block-name="右侧内容" id="block-C" data-asyn-pb="true">
+                        <div class="custom-main-inner custom-main-play minHt">
+                            <div class="wrapper-cols" id="widget-tab-1" data-tabname="tab-1" data-widget-hoverclick="true">
+                                <!--内容区导航开始-->
+                                <div class="read-title mb15 ml20">
+                                    <div class="fl mr20 ">
+                                        <h2 class="read-title-bd  fl toIE " data-tab-title="widget-tab-1 " data-lazyhover="true"
+                                        data-lazyhovertm="500 " data-type="videos " data-seq="1 ">
+                                            <a href="https://payweb.iqiyi.com/mywallet.html">
+                                                钱包首页
+                                            </a>
+                                            <span class="tip_t ">
+                                                <i class="tip_outer ">
+                                                </i>
+                                                <i class="tip_inner ">
+                                                </i>
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div class="fl mr20 ">
+                                        <h2 class="read-title-bd read-title-spsc fl toIE " data-tab-title="widget-tab-1 "
+                                        data-lazyhover="true" data-lazyhovertm="500 " data-type="goods " data-seq="2 ">
+                                            <a href="https://payweb.iqiyi.com/web/transactions">
+                                                零钱明细
+                                            </a>
+                                            <span class="tip_t ">
+                                                <i class="tip_outer ">
+                                                </i>
+                                                <i class="tip_inner ">
+                                                </i>
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div class="fl mr20 ">
+                                        <h2 class="read-title-bd read-title-spsc fl toIE " data-tab-title="widget-tab-1 "
+                                        data-lazyhover="true" data-lazyhovertm="500 " data-type="goods " data-seq="2 ">
+                                            <a href="https://payweb.iqiyi.com/web/i_transactions">
+                                                交易记录
+                                            </a>
+                                            <span class="tip_t ">
+                                                <i class="tip_outer ">
+                                                </i>
+                                                <i class="tip_inner ">
+                                                </i>
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div class="fl mr20 ">
+                                        <h2 class="read-title-bd read-title-spsc fl toIE " data-tab-title="widget-tab-1 "
+                                        data-lazyhover="true " data-lazyhovertm="500" data-type="goods " data-seq="2 ">
+                                            <a href="https://payweb.iqiyi.com/web/mywallet/security ">
+                                                安全设置
+                                            </a>
+                                            <span class="tip_t ">
+                                                <i class="tip_outer ">
+                                                </i>
+                                                <i class="tip_inner ">
+                                                </i>
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div class="fr read-rm rd-delate-hover dn " id="ucfav-finish ">
+                                        <a title="完成 " href="javascript:; " class="vl-inline ">
+                                            完成
+                                        </a>
+                                    </div>
+                                    <div class="fr read-rm rd-delate-hover rd-delate mr10 dn " id="ucfav-clear ">
+                                        <a title="清空全部收藏 " href="javascript:; " class="vl-inline " rseat="U81934_qksc ">
+                                            清空收藏
+                                        </a>
+                                    </div>
+                                    <div class="fr read-rm dn " id="ucfav-del " data-private-display=" ">
+                                        <a title="删除收藏 " href="javascript:; " class="vl-inline " rseat="U81934_scsc ">
+                                            删除收藏
+                                        </a>
+                                    </div>
+                                    <div class="wallet-agreement">
+                                        <a title="爱奇艺钱包协议" href="http://vip.iqiyi.com/iwallet-agreement.html"
+                                        class="vl-inline" target="_blank">
+                                            爱奇艺钱包协议
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="walletIndexTop ml20">
+                                    <div class="userPic">
+                                        <a href="http://www.iqiyi.com/u/1455686071" target="_blank">
+                                            <img src="picture/male-70.png" width="53" height="53" alt="" data-leftnav-elem="head">
+                                        </a>
+                                    </div>
+                                    <div class="userInfor fl">
+                                        <div class="userInforTop">
+                                            <span>
+                                                zhangxiaowen007
+                                            </span>
+                                            <span class="ml10">
+                                                UID：1455686071
+                                            </span>
+                                            <span class="ml10 cf00">
+                                                为了您的资金安全,请先
+                                                <a href="https://payweb.iqiyi.com/pay/set.html" class="c5aa700" target="_blank">
+                                                    设置支付密码
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="userInforBtm">
+                                            <ul>
+                                                <li class="fl mr20" data-target="setname">
+                                                    <div class="userSetPic noSetPic1 fl">
+                                                    </div>
+                                                    <div class="fl">
+                                                        未设置
+                                                    </div>
+                                                    <div class="dn" data-tip="setname">
+                                                        <div class="userPopup userPopup01 realUser">
+                                                            未认证
+                                                            <a href="https://payweb.iqiyi.com/pay/setSM.html?resourceurl=https://payweb.iqiyi.com/mywallet.html"
+                                                            class="ml5 c5aa700" target="_blank">
+                                                                立即认证
+                                                            </a>
+                                                        </div>
+                                                        <span class="arrow1">
+                                                            <em class="arrow2">
+                                                            </em>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="fl mr20" data-target="bandphone">
+                                                    <div class="userSetPic setPic2 fl">
+                                                    </div>
+                                                    <div class="fl">
+                                                        已绑定
+                                                    </div>
+                                                    <div class="dn" data-tip="bandphone">
+                                                        <div class="userPopup userPopup05 realUser" data-tip="bandphone">
+                                                            已绑定手机:
+                                                            <span>
+                                                                176****8300
+                                                            </span>
+                                                            <a href="http://passport.iqiyi.com/pages/secure/account/modify_phone_index.action"
+                                                            class="ml5 c5aa700" target="_blank">
+                                                                修改
+                                                            </a>
+                                                        </div>
+                                                        <span class="arrow5">
+                                                            <em class="arrow6">
+                                                            </em>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li class="fl" data-target="setpwd">
+                                                    <div class="userSetPic noSetPic3 fl">
+                                                    </div>
+                                                    <div class="fl">
+                                                        未设置
+                                                    </div>
+                                                    <div class="dn" data-tip="setpwd">
+                                                        <div class="userPopup userPopup03 realUser">
+                                                            未设置
+                                                            <a href="https://payweb.iqiyi.com/pay/set.html" class="ml5 c5aa700" target="_blank">
+                                                                立即设置
+                                                            </a>
+                                                        </div>
+                                                        <span class="arrow3 arrow3_1">
+                                                            <em class="arrow4">
+                                                            </em>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="walletIndexCenter ml20">
+                                    <div class="walletIndexCenterTop">
+                                        我的资产
+                                    </div>
+                                    <ul class="walletIndexCenterBtm">
+                                        <li class="walletAssetsList">
+                                            <div class="assetsListTxt">
+                                                <div class="assetsTop">
+                                                    <div class="assetsName">
+                                                        零钱
+                                                    </div>
+                                                    <div class="assetsTips">
+                                                        <div class="userPopup userPopup02">
+                                                            请设置密码后查看余额
+                                                            <a href="https://payweb.iqiyi.com/pay/set.html" class="assetsTipsLink"
+                                                            target="_blank">
+                                                                立即设置
+                                                            </a>
+                                                        </div>
+                                                        <span class="arrow3">
+                                                            <em class="arrow4">
+                                                            </em>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="assetsBtm">
+                                                    <span class="org">
+                                                        ?
+                                                    </span>
+                                                    元
+                                                </div>
+                                            </div>
+                                            <div class="assetsListBtn">
+                                                <a href="javascript:;" class="disabled" id="recharge">
+                                                    充值
+                                                </a>
+                                                <a href="javascript:;" class="disabled">
+                                                    提现
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="walletAssetsList">
+                                            <div class="assetsListTxt">
+                                                <div class="assetsTop">
+                                                    <div class="assetsName">
+                                                        奇豆
+                                                    </div>
+                                                </div>
+                                                <div class="assetsBtm">
+                                                    <span class="org">
+                                                        0
+                                                    </span>
+                                                    奇豆
+                                                </div>
+                                            </div>
+                                            <div class="assetsListBtn">
+                                                <a href="javascript:;" id="rechargeQd">
+                                                    充值
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="walletAssetsList bn">
+                                            <div class="indexCenterBtm">
+                                                <span class="indexPic1">
+                                                </span>
+                                                <span>
+                                                    银行卡
+                                                    <a href="https://payweb.iqiyi.com/mywallet/bankcard.html">
+                                                        0张
+                                                    </a>
+                                                </span>
+                                                <a href="https://payweb.iqiyi.com/mywallet/bankcard.html">
+                                                    管理
+                                                </a>
+                                            </div>
+                                            <div class="indexCenterBtm">
+                                                <span class="indexPic2">
+                                                </span>
+                                                <span>
+                                                    优惠券
+                                                    <a href="javascript:;">
+                                                        0
+                                                    </a>
+                                                    张
+                                                </span>
+                                                <a href="javascript:;" id='viewCoupon'>
+                                                    查看
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <textarea style="display: none;" data-pop-tpl="lingqian">
+                                    <div class="pay_pop-fatWrap">
+                                        <h2 class="pay_pop-head">
+                                            <a href="javascript:;" class="pay_pop-close" j-delegate="close">
+                                            </a>
+                                            零钱充值
+                                        </h2>
+                                        <div class="pay_pop-con">
+                                            <div class="pay_pop-inner">
+                                                <div class="payInputBox mb0">
+                                                    <label class="payBoxName">
+                                                        充值金额
+                                                    </label>
+                                                    <input class="payBoxTxt" type="text" id="lqMoney" style="ime-mode:disabled">
+                                                    <span class="payBoxUnit">
+                                                        元
+                                                    </span>
+                                                </div>
+                                                <div class="inner-tips">
+                                                    <span class="tipsTxt" data-tip="quota">
+                                                    </span>
+                                                    <span class="tipsError dn" data-tip="lqTip">
+                                                    </span>
+                                                </div>
+                                                <div class="inner-btn-lt">
+                                                    <a href="javascript:;" class="pay_pop-greenBtn" j-delegate="lqPay">
+                                                        立即充值
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </textarea>
+                                <textarea class="dn" data-pop-tpl="sysErr">
+                                    <div class="pay_pop-wrap">
+                                        <h2 class="pay_pop-head">
+                                            <a href="javascript:;" class="pay_pop-close" j-delegate="close">
+                                            </a>
+                                            信息提示
+                                        </h2>
+                                        <div class="pay_pop-con">
+                                            <div class="pay_pop-inner">
+                                                <p class="payComplete mt20 fz14" data-err='err'>
+                                                </p>
+                                                <div class="inner-btn-ct">
+                                                    <a href="javascript:;" class="pay_pop-greenBtn" j-delegate="close">
+                                                        确定
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </textarea>
+                                <div class="walletIndexBtm ml20 mb20">
+                                    <table data-wallet-elem="list">
+                                        <tr>
+                                            <td class="fwt700 wtd1 cf6" style="border-right:none;">
+                                                零钱明细
+                                                <a href="https://payweb.iqiyi.com/web/transactions" class="allDeal allDealToIE"
+                                                target="_blank">
+                                                    查看全部零钱明细
+                                                </a>
+                                            </td>
+                                            <td style="border-right:none;" class="wtd2 cf6">
+                                            </td>
+                                            <td style="border-right:none;" class="wtd3 cf6">
+                                            </td>
+                                            <td class="wtd4 cf6">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="dn" data-total="pageCount">
+                                        0
+                                    </div>
+                                    <div class="noMark ml20">
+                                        暂无零钱明细
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 个人中心左侧导航栏 开始 -->
+                    <div class="custom-main-left-side" id="uc-leftBar">
+                        <div class="side-top-tr" data-leftnav-elem="content">
+                            <div class="mod-side_menu">
+                                <dl class="mod-menu">
+                                    <dd>
+                                        <div class="tle  ">
+                                            <a href="http://www.iqiyi.com/u/record" rseat="lnav75737_record" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    播放记录
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle  ">
+                                            <a href="http://www.iqiyi.com/u/sub" rseat="lnav75737_sub" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    我的订阅
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle ">
+                                            <a href="http://www.iqiyi.com/u/fav" rseat="lnav75737_fav" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    追剧&收藏
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle ">
+                                            <a href="http://www.iqiyi.com/u/news/update" rseat="lnav75737_news" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    我的消息
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle ">
+                                            <a href="http://www.iqiyi.com/u/1455686071" rseat="lnav75737_spacem" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    我的空间
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle  ">
+                                            <a href="http://www.iqiyi.com/u/accountset" rseat="612211_setting" class="link">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    个人设置
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="user_line">
+                                </div>
+                                <dl class="mod-menu">
+                                    <dd>
+                                        <div class="tle" data-leftbar-elem="menu">
+                                            <a href="javascript:void(0)" class="link" rseat="lnav75737_vip" data-menu-elem="title">
+                                                <i class="ff-icon">
+                                                    
+                                                </i>
+                                                <span class="menu-text">
+                                                    VIP会员
+                                                </span>
+                                            </a>
+                                            <!-- 展开时去掉 dn 追加 link-click-open 类名 ，关闭时将 link-click-open 替换为 link-click-close
+                                            类名 -->
+                                            <ul class="mod-mene-sub" style="display: none;" data-menu-elem="body"
+                                            data-menu-show="hide">
+                                                <li class="pt10">
+                                                    <a href="http://vip.iqiyi.com/" rseat="lnav75737_vippkg" target="_blank"
+                                                    class="mene-sub-title">
+                                                        我的VIP
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="//vip.iqiyi.com/upgrade.html" rseat="lnav75737_vipclub" target="_blank"
+                                                    class="mene-sub-title">
+                                                        VIP俱乐部
+                                                    </a>
+                                                </li>
+                                                <li class="pb10">
+                                                    <a href="http://vip.iqiyi.com/jihuoma.html" class="mene-sub-title" target="_blank"
+                                                    rseat="lnav75737_vipact">
+                                                        激活会员卡
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle selected">
+                                            <a href="https://payweb.iqiyi.com/mywallet.html" rseat="lnav75737_account"
+                                            class="link" target="_blank">
+                                                <i class="icon-personalCenterNav icon-wallt">
+                                                </i>
+                                                <span class="menu-text">
+                                                    我的钱包
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="user_line">
+                                </div>
+                                <dl class="mod-menu">
+                                    <dd>
+                                        <div class="tle" data-leftbar-elem="menu">
+                                            <a href="javascript:void(0)" class="link" rseat="612211_author" data-menu-elem="title">
+                                                <i class="icon-personalCenterNav icon-creation">
+                                                </i>
+                                                <span class="menu-text">
+                                                    创作中心
+                                                </span>
+                                            </a>
+                                            <ul class="mod-mene-sub" style="display: none;" data-menu-elem="body"
+                                            data-menu-show="hide">
+                                                <li class="pt10 ">
+                                                    <a href="http://www.iqiyi.com/u/video" rseat="lnav75737_videoMng" class="mene-sub-title">
+                                                        视频管理
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="http://www.iqiyi.com/u/live" rseat="607111_1" class="mene-sub-title">
+                                                        直播管理
+                                                    </a>
+                                                </li>
+                                                <li class="pb10 ">
+                                                    <a href="http://www.iqiyi.com/u/a/video" rseat="704281_data" class="mene-sub-title">
+                                                        数据管理
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="tle  " data-leftbar-elem="menu">
+                                            <a href="javascript:void(0)" class="link" rseat="612211_highlight" data-menu-elem="title">
+                                                <i class="icon-personalCenterNav  icon-rim">
+                                                </i>
+                                                <span class="menu-text">
+                                                    精彩周边
+                                                </span>
+                                            </a>
+                                            <!-- 展开时去掉 dn 追加 link-click-open 类名 ，关闭时将 link-click-open 替换为 link-click-close
+                                            类名 -->
+                                            <ul class="mod-mene-sub" style="display: none;" data-menu-elem="body"
+                                            data-menu-show="hide">
+                                                <li class="pt10">
+                                                    <a href="http://vip.game.iqiyi.com/index.php?r=UserGrowth/myCenter/myGame"
+                                                    rseat="lnav75737_game" class="mene-sub-title" target="_blank">
+                                                        游戏
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://wenxue.iqiyi.com/book/shelf.html" rseat="612211_shelf"
+                                                    class="mene-sub-title" target="_blank">
+                                                        书架
+                                                    </a>
+                                                </li>
+                                                <li class="pb10">
+                                                    <a href="http://mall.iqiyi.com/shoppingcart.html?odfrm=pc_shoppingcart"
+                                                    rseat="lnav75737_mall" class="mene-sub-title" target="_blank">
+                                                        购物车
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="user_line">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 个人中心左侧导航栏改版 结束 -->
+                </div>
+            </div>
+        </div>
+        <!-- 内容区 结束 -->
+        <!-- 底部 开始 -->
+        <div class="footerN1214" data-css="fragments/block_footerN1214.css" data-widget-footer="footer"
+        id="block-Z" data-block-name="页底">
+            <p class="footmenu">
+                <a href="http://www.iqiyi.com/common/aboutus.html" class="s1" rel="nofollow"
+                title="公司介绍" rseat="公司介绍" target="_blank">
+                    公司介绍
+                </a>
+                <a href="http://www.iqiyi.com/common/news.html" rel="nofollow" title="新闻动态"
+                rseat="新闻动态" target="_blank">
+                    新闻动态
+                </a>
+                <a href="http://www.iqiyi.com/common/contactus.html" rel="nofollow" title="联系方式"
+                rseat="联系方式" target="_blank">
+                    联系方式
+                </a>
+                <a href="http://zhaopin.iqiyi.com" rel="nofollow" title="招聘英才" rseat="招聘英才"
+                target="_blank">
+                    招聘英才
+                </a>
+                <a href="http://labs.iqiyi.com" rel="nofollow" title="爱奇艺实验室" rseat="爱奇艺实验室"
+                target="_blank">
+                    爱奇艺实验室
+                </a>
+                <a href="http://open.iqiyi.com/" rel="nofollow" title="开放平台" rseat="开放平台"
+                target="_blank">
+                    开放平台
+                </a>
+                <a href="http://www.iqiyi.com/common/rz.html" rel="nofollow" title="爱奇艺号认证"
+                rseat="爱奇艺号认证" target="_blank">
+                    爱奇艺号认证
+                </a>
+                <a href="http://mp.iqiyi.com/" rel="nofollow" title="爱奇艺号" rseat="爱奇艺号"
+                target="_blank">
+                    爱奇艺号
+                </a>
+                <a href="http://help.iqiyi.com/" rel="nofollow" title="帮助中心" rseat="帮助中心"
+                target="_blank">
+                    帮助中心
+                </a>
+                <a href="http://www.iqiyi.com/common/copyright.html?entry=iqiyi" rel="nofollow"
+                rseat="侵权投诉" title="侵权投诉" target="_blank">
+                    侵权投诉
+                </a>
+                <a href="http://www.iqiyi.com/common/20100420/n4813.html" rel="nofollow"
+                title="AboutUs" rseat="About Us" target="_blank">
+                    About Us
+                </a>
+            </p>
+            <p class="fEn">
+                Copyright © 2017
+                <a href="http://www.iqiyi.com" class="link0" title="爱奇艺" rseat="爱奇艺" target="_blank">
+                    爱奇艺
+                </a>
+                All Rights Reserved
+            </p>
+        </div>
+        <!-- 底部 结束 -->
+    </body>
+
+</html>
