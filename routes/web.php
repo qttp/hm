@@ -21,3 +21,21 @@ Route::get('/hm',function(){
 Route::get('/vi',function(){
     return view('/v/vi');
 });
+Route::get('/index',function(){
+    return view('/v/index');
+});
+Route::get('/info',function(){
+    return view('v/info');
+});
+Route::get('/list',function(){
+    return view('v/list');
+});
+Route::get('/vipinfo',function(){
+    return view('v/vipInfo');
+});
+Route::get('/search',function(){
+    return view('v/search');
+});
+Route::get('/question',function(){
+    return view('v/question');
+});

@@ -10,9 +10,9 @@
         />
         <meta name="description" content="爱奇艺电影频道拥有全网最新、最全的高清在线电影资源，热门高清电影、最新上线电影、电影预告在线观看。包含国产电影、韩国电影、日本电影、美国电影、欧洲电影、印度电影、泰国电影。电影类型有戏剧电影、科幻电影、爱情片、动作片、枪战片、谍战片、悬疑、恐怖片、魔幻、犯罪、惊辣、奇幻、战斗片、青春、坚挺伦理等。有免费电影和付费电影可供选择，在线高清电影下载。"
         />
-        <link type="text/css" rel="stylesheet" href="css/v3-basic_other.css">
-        <link type="text/css" rel="stylesheet" href="css/v3-dianying-v1.css">
-		<script type="text/javascript" src="js/jquery.min.js">
+        <link type="text/css" rel="stylesheet" href="/video/css/v3-basic_other.css">
+        <link type="text/css" rel="stylesheet" href="/video/css/v3-dianying-v1.css">
+		<script type="text/javascript" src="/video/js/jquery.min.js">
         </script>
 		<script type="text/javascript">
 		    $(function(){
@@ -92,7 +92,7 @@
 				startImgs();
 			})
 		</script>
-        <script type="text/javascript" src="js/sea1.2.js">
+        <script type="text/javascript" src="/video/js/sea1.2.js">
         </script>
     </head>
     
@@ -150,23 +150,22 @@
                 }
             } ();
         </script>
+        <!--导航开始-->
         <div id="block-A" data-block-name="导航">
-            <div class=" topNavWrap-pindao " data-widget-compatible="wrap" data-ipadhack-elem="nav">
-                <div class="navTopNew topNav-pindao" data-widget-navctrl="channel" data-widget-toplinefloater="blackFloater"
-                data-toplinefloater-scrolltop="489">
-                    <div class="navMid clearfix">
+            <div class="topNavWrap-player" data-widget-compatible="wrap" data-ipadhack-elem="nav">
+                <div class="navPlayer topNav-player topNav-fixed" data-widget-navctrl="player"
+                data-widget-toplinefloater="blackFloater">
+                    <div class="navcont clearfix">
                         <div class="topNavLt">
-                            <div class="topLogo caihong">
-                                <a href="//www.iqiyi.com/" data-navpingback="logo" rseat="iQIYI_logo">
-                                    <img alt="爱奇艺 iQIYI.COM" title="爱奇艺 iQIYI.COM" rseat="iQIYI_yxpz" src="picture/logo108x35_black.png"
-                                    />
-                                </a>
-                            </div>
+                            <a class="logo" href="http://www.iqiyi.com/" data-navpingback="logo" rseat="iQIYI_logo">
+                                <img title="爱奇艺 iQIYI.COM" alt="爱奇艺 iQIYI.COM" src="picture/logo108x35_black.png"
+                                rseat="iQIYI_yxpz">
+                            </a>
                         </div>
                         <!-- nav first Start -->
-                        <div class="navboxFirst  navboxFirst-channel  navboxWx" data-widget-navctrl-elem="first"
+                        <div class="navboxFirst navboxFirst-channel navboxWx" data-widget-navctrl-elem="first"
                         style="display:none">
-                            <div class="mod-navPop clearfix" data-test-id="pdUl1">
+                            <div class="mod-navPop clearfix">
                                 <div class="navPop_bd clearfix">
                                     <ul class="nav_one clearfix">
                                         <li>
@@ -185,17 +184,17 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_two clearfix" data-test-id="pdUl2">
+                                    <ul class="nav_two clearfix">
                                         <li>
                                             <a rseat="电影" href="http://www.iqiyi.com/dianying/">
                                                 电影
                                             </a>
                                         </li>
                                         <li class="nav_3z">
-                                            <a rseat="电视剧" href="http://www.iqiyi.com/dianshiju/" data-widget='navdot'
-                                            data-dot-cid='5'>
+                                            <a rseat="电视剧" href="http://www.iqiyi.com/dianshiju/" data-widget="navdot"
+                                            data-dot-cid="5">
                                                 电视剧
-                                                <i data-newicon="dot" style="display:none;" class="tip_dot">
+                                                <i style="display:none;" class="tip_dot" data-newicon="dot">
                                                 </i>
                                             </a>
                                         </li>
@@ -220,7 +219,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_three clearfix" data-test-id="pdUl3">
+                                    <ul class="nav_three clearfix">
                                         <li>
                                             <a rseat="动漫" href="http://www.iqiyi.com/dongman/">
                                                 动漫
@@ -252,7 +251,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_four clearfix" data-test-id="pdUl4">
+                                    <ul class="nav_four clearfix">
                                         <li>
                                             <a rseat="音乐" href="http://music.iqiyi.com">
                                                 音乐
@@ -284,7 +283,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_five clearfix" data-test-id="pdUl5">
+                                    <ul class="nav_five clearfix">
                                         <li>
                                             <a rseat="财经" href="http://business.iqiyi.com">
                                                 财经
@@ -316,19 +315,19 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_six clearfix" data-test-id="pdUl6">
+                                    <ul class="nav_six clearfix">
                                         <li>
                                             <a rseat="风云榜" href="http://top.iqiyi.com">
                                                 风云榜
                                             </a>
                                         </li>
-                                        <li class="nav_3z">
-                                            <a rseat="奇秀直播" href="http://x.pps.tv/" target='_blank'>
+                                        <li>
+                                            <a rseat="奇秀直播" href="http://x.pps.tv/" target="_blank">
                                                 奇秀直播
                                             </a>
                                         </li>
                                         <li>
-                                            <a rseat="全网影视" href="http://v.iqiyi.com" target='_blank'>
+                                            <a rseat="全网影视" href="http://v.iqiyi.com" target="_blank">
                                                 全网影视
                                             </a>
                                         </li>
@@ -342,15 +341,15 @@
                                                 全网搜索
                                             </a>
                                         </li>
-                                        <li class="nav_3z">
-                                            <a rseat="应用商店" href="http://store.iqiyi.com" target='_blank'>
+                                        <li>
+                                            <a rseat="应用商店" href="http://store.iqiyi.com" target="_blank">
                                                 应用商店
                                             </a>
                                         </li>
                                     </ul>
-                                    <ul class="nav_seven clearfix" data-test-id="pdUl7">
+                                    <ul class="nav_seven clearfix">
                                         <li>
-                                            <a rseat="商城" href="http://mall.iqiyi.com?odfrm=AQY01" target='_blank'>
+                                            <a rseat="商城" href="http://mall.iqiyi.com?odfrm=AQY01" target="_blank">
                                                 商城
                                             </a>
                                         </li>
@@ -360,7 +359,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a rseat="文学" href="http://wenxue.iqiyi.com" target='_blank'>
+                                            <a rseat="文学" href="http://wenxue.iqiyi.com" target="_blank">
                                                 文学
                                             </a>
                                         </li>
@@ -405,7 +404,13 @@
                                     <!-- vip新结构 -->
                                     <ul class="nav_eight nav_eight-vip clearfix">
                                         <li>
-                                            <a href="http://vip.iqiyi.com/?fc=b4df9faa4b31aec4" class="nav_vip-star">
+                                            <a href="http://vip.iqiyi.com/?fc=b4df9faa4b31aec4" class="nav_link-vipNew"
+                                            rseat="vip_a">
+                                                <i class="icon-vipGold">
+                                                </i>
+                                                <span class="nav_link-vipTx">
+                                                    VIP会员
+                                                </span>
                                             </a>
                                         </li>
                                     </ul>
@@ -413,14 +418,14 @@
                                 </div>
                                 <!-- app download start -->
                                 <div class="mod-appDownload-nav j_pca_pb" rseat="pcltdown_1501192">
-                                    <a href="javascript:;" pubarea="pcltdown_1501192" rseat="pcltdown_1501192"
-                                    data-widget-getUrl="layerDownloadUrl" class="appDownload-nav_img" title="">
+                                    <a href="" pubarea="pcltdown_1501192" data-widget-getUrl="layerDownloadUrl"
+                                    class="appDownload-nav_img" title="" rseat="pcltdown_1501192">
                                     </a>
                                     <p class="appDownload-nav_desc">
                                         <span>
                                             提高3倍流畅度！
                                         </span>
-                                        <a href="javascript:;" pubarea="pcltdown_1501192" data-widget-getUrl="layerDownloadUrl"
+                                        <a href="" pubarea="pcltdown_1501192" data-widget-getUrl="layerDownloadUrl"
                                         class="appDownload-nav_link">
                                             立即下载
                                         </a>
@@ -429,58 +434,33 @@
                                 <!-- app download end -->
                             </div>
                         </div>
+                        <iframe class="frame-leftMenu" frameborder="0" data-navctrl-elem="underframe">
+                        </iframe>
                         <!-- nav first End -->
-                        <div id="j-header" class="topNavRt topNavRt_new" data-widget-navmsgtips="navmsgtips">
+                        <div class="topNavRt topNavRt_new" data-widget-navmsgtips="navmsgtips">
                             <!-- 引导VIP用户绑定手机号 -->
                             <div data-vip-bind="mobile">
                             </div>
                             <!-- 引导VIP用户绑定手机号 end-->
-                            <!--old=login start-->
-                            <div data-temp-old="true" class="topLogin" data-private-display="" style="display: none;">
-                                <!--更新提醒-->
-                                <span class="toGeng">
-                                    <span style="display:none;" j-updaterecord="icon" class="gxBg">
-                                        <span class="gxNum">
-                                        </span>
-                                        <em j-iconnum="true">
-                                            0
-                                        </em>
-                                    </span>
-                                    <a j-firsttip="hasnot" j-updaterecord="title" style="display:none;" href="javascript:void(0)"
-                                    class="gx">
-                                        更新
-                                    </a>
-                                </span>
-                                <!--更新提醒 end-->
-                                <span j-updaterecord="titlesplit" style="display:none" class="line">
-                                    |
-                                </span>
-                                <a class="a1 jilu" onfocus="this.blur();" id="topT1" onclick="return false;"
-                                href="#" rseat="tj_record" data-pb="pru=P00PRU">
-                                    播放记录
-                                </a>
-                                <span id="j-login-wrapper" class="">
-                                </span>
+                            <div data-widget-activity="topNavBox">
                             </div>
-                            <!--old=login end-->
-                            <!--new=login start-->
-                            <div data-con="head" id="data-temp-new" class="topLogin">
+                            <!--活动通知结构-->
+                            <!--topNavRt topLogin start-->
+                            <div class="topLogin" id="data-temp-new" data-con="head" style="display: block;">
                                 <!--add bofang jilu-->
-                                <div class="topNav_user usrTx-box">
+                                <div class="topNav_user usrTx-box" data-widget-indexpageuserinfo="indexpageuserinfo">
                                     <div class="usrTx-outer" data-widget-userregistlogin="userregistlogin"
                                     id="widget-userregistlogin" style="display: none;">
                                         <!-- 控制积分弹层和用户名 -->
-                                        <div>
+                                        <span id="userboxparent">
                                             <!--个人积分弹出层 开始-->
-                                            <div style="float:left;">
-                                                <div class="usrTx-new_hover" style="display:none;" data-widget-userbox='userbox'>
-                                                </div>
+                                            <div class="usrTx-new_hover" style="display: none;" data-widget-userbox="userbox">
                                             </div>
                                             <!--个人积分弹出层 结束-->
                                             <span j-user="name" style="display: none;" class="usrTx-name" data-elem="topUserName"
                                             data-private-display="block">
                                                 <span data-widget-score="name">
-                                                    <a href="http://www.iqiyi.com/u/" rseat="tj_usrclk" class="usrTx_newWrap clearfix">
+                                                    <a href="http://www.iqiyi.com/u/" rel="nofollow" rseat="tj_usrclk" class="usrTx_newWrap clearfix">
                                                         <span class="myName" id="top-username">
                                                         </span>
                                                         <i data-vipheader-elem="vipicon" class="kthy0201" style="display: none;">
@@ -496,9 +476,8 @@
                                                 style="display: none;">
                                                 </span>
                                             </span>
-                                        </div>
-                                        <!-- 控制登录注册 -->
-                                        <div>
+                                        </span>
+                                        <span>
                                             <!--登录-->
                                             <div data-private-display="" data-elem="topLoginBar" class="usrTx-login">
                                                 <a class="login0201" href="javascript:void(0)" data-elem="topLoginPanel"
@@ -506,10 +485,9 @@
                                                     登录
                                                 </a>
                                                 <!--登录弹出层 开始-->
-                                                <div class="usrTxGeneral-box_hover usrLogin-pop" style="display: none"
-                                                data-widget-loginbox='loginbox'>
+                                                <div class="usrTxGeneral-box_hover usrLogin-pop" style="display: none;"
+                                                data-widget-loginbox="loginbox" data-private-display="block">
                                                 </div>
-                                                <!--登录弹出层 结束-->
                                             </div>
                                             <div class="fl ml5 mr5" data-elem="splitline">
                                                 |
@@ -522,18 +500,20 @@
                                                 </a>
                                                 <!--注册弹出层 开始-->
                                                 <div class="usrTxGeneral-box_hover usrTxGeneral-box_hover_reg usrLogin-pop"
-                                                style="display: none" data-widget-registbox='registbox'>
+                                                style="display: none;" data-widget-registbox="registbox">
                                                 </div>
                                                 <!--注册弹出层 结束-->
                                             </div>
-                                        </div>
+                                        </span>
+                                        <!--usrTx-outer end-->
                                     </div>
                                 </div>
                                 <!--add vip-->
+                                <!--topNav_vip start-->
                                 <div class="topNav_vip" data-vipheader-elem="wrapper" id="widget-vipheader"
                                 data-vipheader-cls="topNav_vip">
-                                    <!--追加hover为vip层-->
-                                    <a class="gx0201" href="//serv.vip.iqiyi.com/order/preview.action?pid=a0226bd958843452&fc=a988b1d4503873af"
+                                    <!--添加VipblockHover可显示VIP层-->
+                                    <a class="gx0201" href="http://serv.vip.iqiyi.com/order/preview.action?pid=a0226bd958843452&fc=a988b1d4503873af"
                                     j-playhistory="title" data-vipheader-elem="header" j-data-elem="zjuser"
                                     data-private-display="" style="display: block;" rseat="tj_opvip">
                                         开通VIP
@@ -543,25 +523,31 @@
                                     rseat="续费VIP">
                                         续费VIP
                                     </a>
-                                    <a class="gx0201" href="//serv.vip.iqiyi.com/order/guide.action?pid=a0226bd958843452&fc=a988b1d4503873af"
+                                    <a class="gx0201" href="http://serv.vip.iqiyi.com/order/guide.action?pid=a0226bd958843452&fc=a988b1d4503873af"
                                     j-playhistory="title" data-vipheader-elem="header" style="display: none;"
                                     rseat="续费VIP">
                                         续费VIP
                                     </a>
-                                    <a class="gx0201" href="//vip.iqiyi.com/?fc=a988b1d4503873af" j-playhistory="title"
+                                    <a class="gx0201" href="http://vip.iqiyi.com/?fc=a988b1d4503873af" j-playhistory="title"
                                     data-vipheader-elem="header" style="display: none;">
                                         VIP会员
                                     </a>
-                                    <a class="gx0201" href="//serv.vip.iqiyi.com/order/preview.action?pid=adb3376b039b970b&fc=a988b1d4503873af"
+                                    <a class="gx0201" href="http://serv.vip.iqiyi.com/order/preview.action?pid=adb3376b039b970b&fc=a988b1d4503873af"
                                     j-playhistory="title" data-vipheader-elem="header" style="display: none;"
                                     rseat="续费VIP">
                                         续费VIP
                                     </a>
+                                    <p class="pub_arrow" style="display:none">
+                                    </p>
                                 </div>
                                 <!--add vip end-->
                                 <!--上传-->
                                 <div class="topNav_upload" id="data-widget-parent" data-class="topNav_upload-nologin"
                                 data-widget="navdot" data-dot-cid="a">
+                                    <div class="icon-qidanTip" data-newicon="a" style="display:none;">
+                                        <i class="nav_mag_dot">
+                                        </i>
+                                    </div>
                                     <a href="javascript:void(0)" data-elem="uploadEntry" data-class="arrow-selected"
                                     rseat="tj_upld" class="topNav_upload_title" rseat="tj_upld">
                                         <i class="nav_upload_icon" data-newicon="dot">
@@ -579,7 +565,7 @@
                                                 <i class="tip_inner">
                                                 </i>
                                             </span>
-                                            <ul class="topNav_upload-bd" data-test-id="pdUl10">
+                                            <ul class="topNav_upload-bd">
                                                 <li>
                                                     <a href="javascript:void(0);" data-widget="navdot" data-dot-cid="b" j-delegate="uploadVideo"
                                                     rseat="tjup_load">
@@ -589,40 +575,43 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="//www.iqiyi.com/u/editor/" data-widget="navdot" data-dot-cid="c"
-                                                    rseat="tjup_editor">
+                                                    <a href="http://www.iqiyi.com/u/editor/" rel="nofollow" data-widget="navdot"
+                                                    data-dot-cid="c" rseat="tjup_editor">
                                                         制作视频
                                                         <i style="display:none;" class="nav_mag_dot" data-newicon="c">
                                                         </i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="//www.iqiyi.com/u/channel" rseat="tjup_kj" data-navuploadfloater-elem="zone">
+                                                    <a href="http://www.iqiyi.com/u/channel" rel="nofollow" rseat="tjup_kj"
+                                                    data-navuploadfloater-elem="zone">
                                                         我的空间
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="//www.iqiyi.com/u/video" rseat="tjup_sp">
+                                                    <a href="http://www.iqiyi.com/u/video" rel="nofollow" rseat="tjup_sp">
                                                         视频管理
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="http://www.iqiyi.com/u/a/video" rseat="tjup_ll" class="j_avideo_data">
+                                                    <a href="http://www.iqiyi.com/u/a/video" rel="nofollow" rseat="tjup_ll"
+                                                    class="j_avideo_data">
                                                         播放数据
                                                     </a>
                                                 </li>
                                                 <li class="no-login">
-                                                    <a href="//mp.iqiyi.com/finance/income" data-elem="checkShare" rseat="tjup_fc">
+                                                    <a href="//mp.iqiyi.com/finance/income" rel="nofollow" data-elem="checkShare"
+                                                    rseat="tjup_fc">
                                                         查看分成
                                                     </a>
                                                 </li>
                                                 <li data-elem="navprofile" class="profile">
-                                                    <a href="//www.iqiyi.com/u/a/profile" rseat="tjup_hx">
+                                                    <a href="http://www.iqiyi.com/u/a/profile" rel="nofollow" rseat="tjup_hx">
                                                         用户画像
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="//www.iqiyi.com/dv/iPartner.html" rseat="tjup_sq">
+                                                    <a href="http://www.iqiyi.com/dv/iPartner.html" rseat="tjup_sq">
                                                         申请分成
                                                     </a>
                                                 </li>
@@ -663,7 +652,7 @@
                                         </a>
                                     </span>
                                     <!-- 弹层 -->
-                                    <div class="qy_nav_pop" >
+                                    <div class="qy_nav_pop" data-navmessagefloater-elem="body">
                                         <div class="nav_pop_inner">
                                             <!-- 箭头 -->
                                             <div class="nav_pop_arrow">
@@ -674,9 +663,9 @@
                                             </div>
                                             <!-- 标题 -->
                                             <div class="nav_pop_title">
-                                                <ul class="pop_title_list" >
+                                                <ul class="pop_title_list">
                                                     <li class="selected" data-navmessagefloater-elem="tabtitle">
-                                                        <a class="title_item" href="javascript:;" rseat="更新提醒">
+                                                        <a class="title_item" href="javascript:void(0);" rseat="更新提醒">
                                                             更新提醒
                                                             <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
@@ -684,7 +673,7 @@
                                                         </a>
                                                     </li>
                                                     <li data-navmessagefloater-elem="tabtitle">
-                                                        <a class="title_item" href="javascript:;" rseat="与我相关">
+                                                        <a class="title_item" href="javascript:void(0);" rseat="与我相关">
                                                             与我相关
                                                             <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
@@ -692,7 +681,7 @@
                                                         </a>
                                                     </li>
                                                     <li data-navmessagefloater-elem="tabtitle">
-                                                        <a class="title_item" href="javascript:;" rseat="系统通知">
+                                                        <a class="title_item" href="javascript:void(0);" rseat="系统通知">
                                                             系统通知
                                                             <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
@@ -733,6 +722,7 @@
                                     </div>
                                 </div>
                                 <!--消息结束-->
+                                <!--topNav_records start-->
                                 <div class="topNav_update topNav_records topNav_records" data-playhistory-cls="topNav_update"
                                 id="widget-playhistory-new">
                                     <a class="a1 jilu" onfocus="this.blur();" href="#" data-playhistory-elem="title"
@@ -811,7 +801,7 @@
                                                                 </em>
                                                             </div>
                                                         </div>
-                                                        <!-- 播放记录相关 start -->
+                                                        <!-- 播放记录-今天 -->
                                                         <div class="nav_pop_recorder" data-playhistory-elem="today">
                                                             <div class="recorder_timeTip">
                                                                 <i class="icon-timeTipDot">
@@ -826,6 +816,7 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
+                                                        <!-- 播放记录-今天 -->
                                                         <div class="nav_pop_recorder" data-playhistory-elem="week">
                                                             <div class="recorder_timeTip">
                                                                 <i class="icon-timeTipDot">
@@ -840,6 +831,7 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
+                                                        <!-- 播放记录-更早 -->
                                                         <div class="nav_pop_recorder" data-playhistory-elem="early">
                                                             <div class="recorder_timeTip">
                                                                 <i class="icon-timeTipDot">
@@ -854,7 +846,6 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                        <!-- 播放记录相关 end -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -871,14 +862,16 @@
                                     <div data-playhistory-elem="underframe" style="display: block;">
                                     </div>
                                 </div>
+                                <!--topNav_records end-->
                             </div>
-                            <!--new=login end-->
+                            <!--topNavRt topLogin end-->
+                            <!--topNavRt search start-->
                             <div class="clearfix">
-                                <div data-widget-suggest="suggest" data-suggest-tip="" class="searchbox"
-                                data-suggest-focusoutblacklist="iqiyi.com">
+                                <div data-widget-suggest="suggest" data-suggest-tip="" data-suggest-layout="0"
+                                class="searchbox" data-suggest-focusoutblacklist="iqiyi.com">
                                     <div data-widget-suggest="hotList">
-                                        <a title="猩球崛起" href='http://so.iqiyi.com/so/q_猩球崛起' target='_blank' style="display:none;"
-                                        data-suggest-elem="keyword">
+                                        <a title="人间至味是清欢" href='http://so.iqiyi.com/so/q_人间至味是清欢' target='_blank'
+                                        style="display:none;" data-suggest-elem="keyword">
                                         </a>
                                     </div>
                                     <form data-suggest-elem="form">
@@ -892,98 +885,267 @@
                                             </span>
                                         </div>
                                     </form>
-                                    <script>
-                                        (function() {
-                                            var g = Q.$('[data-widget-suggest="suggest"]');
-                                            if (g) {
-                                                var f = {
-                                                    widget: g,
-                                                    form: Q.$('[data-suggest-elem="form"]'),
-                                                    input: Q.$('[data-suggest-elem="input"]'),
-                                                    btn: Q.$('[data-suggest-elem="btn"]')
-                                                };
-                                                var a;
-                                                var h = f.widget.attr("data-suggest-searchtarget") || "_blank";
-                                                var e = f.widget.attr("data-suggest-refersource") || "";
-                                                f.btn.on("click",
-                                                function() {
-                                                    if (!window.searchSuggestInited && f.input.value()) {
-                                                        b()
-                                                    }
-                                                });
-                                                f.input[0].onkeydown = function(i) {
-                                                    if (!window.searchSuggestInited && i.keyCode === 13 && !f.input.value()) {
-                                                        return false
-                                                    }
-                                                };
-                                                var c = [];
-                                                f.input.on("keyup",
-                                                function(i) {
-                                                    if (!window.searchSuggestInited && f.input.value()) {
-                                                        d()
-                                                    }
-                                                });
-                                                if (f.input.value()) {
-                                                    d()
-                                                }
-                                                function d() {
-                                                    var j = "http://so.iqiyi.com/so/q_" + encodeURIComponent(f.input.value());
-                                                    var l = {
-                                                        source: "input",
-                                                        "sr": Math.floor((new Date()).getTime() * Math.random())
-                                                    };
-                                                    if (c) {
-                                                        c.forEach(function(m) {
-                                                            f.form.remove(m)
-                                                        })
-                                                    }
-                                                    c = [];
-                                                    for (var k in l) {
-                                                        var i = Q.element.Element.create({
-                                                            tagName: "input"
-                                                        });
-                                                        i.css("display", "none");
-                                                        i.attr("type", "hidden");
-                                                        i.attr("name", k);
-                                                        i.attr("data-elems", "input");
-                                                        i.value(decodeURIComponent(l[k]));
-                                                        f.form.append(i);
-                                                        c.push(i)
-                                                    }
-                                                    f.form.attr("target", h);
-                                                    f.form.attr("method", "GET");
-                                                    f.form[0].action = j
-                                                }
-                                                function b() {
-                                                    var i = "http://so.iqiyi.com/so/q_" + encodeURIComponent(f.input.value()) + "?source=input&sr=" + Math.floor((new Date()).getTime() * Math.random());
-                                                    if (e) {
-                                                        i += "&" + e
-                                                    }
-                                                    if (h === "_self") {
-                                                        window.location.href = i
-                                                    } else {
-                                                        window.open(i)
-                                                    }
-                                                }
-                                            }
-                                        })();
-                                    </script>
+                                    <div class="soResult dn" data-suggest-elem="soguide">
+                                        <div class="mod-tip-search">
+                                            <a class="tip_content" pb="t=20" pubarea="pcltdown_mac_search" target="black"
+                                            href="javascript:void(0);" j-delegate="getDownloadUrl">
+                                                使Mac客户端，看片更有范！
+                                            </a>
+                                            <a class="tip_close" href="javascript:void();" j-delegate="close" pb="t=20"
+                                            rseat="1501271_cls">
+                                                ×
+                                            </a>
+                                        </div>
+                                    </div>
                                     <div class="soResult" data-suggest-elem="body" style="display:none;">
                                         <div class="soResult_con">
                                             <ul class="soHistory_list" data-suggest-elem="historylist">
                                             </ul>
-                                            <ul class="soResult_list soHot_list" data-suggest-elem="list">
+                                            <ul class="soResult_list" data-suggest-elem="list">
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!--topNavRt search end-->
+                            </div>
+                            <div class="nav_pop_single" data-navmsgtips-content="content">
+                            </div>
+                            <!--topNavRt search end-->
+                            <div class="gradientLayer">
                             </div>
                         </div>
                     </div>
+                    <div class="qy-nav-popup-pad" style="display:block">
+                        <div class="nav-channelList-v2" data-widget-navctrl-elem="padfirst" style="display: none">
+                            <ul class="channelList_item clearfix">
+                                <li data-pb="t=5">
+                                    <a href="//yule.iqiyi.com" title="娱乐">
+                                        娱乐
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//sports.iqiyi.com" title="体育">
+                                        体育
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/news/" title="资讯">
+                                        资讯
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/dianying/" title="电影">
+                                        电影
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/dianshiju/" title="电视剧">
+                                        电视剧
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//trailer.iqiyi.com" title="片花">
+                                        片花
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/zongyi/" title="综艺">
+                                        综艺
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/weidianying/" title="微电影">
+                                        微电影
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//talkshow.iqiyi.com" title="脱口秀">
+                                        脱口秀
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/dongman/" title="动漫">
+                                        动漫
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//life.iqiyi.com" title="生活">
+                                        生活
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//child.iqiyi.com" title="少儿">
+                                        少儿
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//baby.iqiyi.com" title="母婴">
+                                        母婴
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//games.iqiyi.com" title="游戏">
+                                        游戏
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//edu.iqiyi.com" title="教育">
+                                        教育
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li data-pb="t=5">
+                                    <a href="//music.iqiyi.com" title="音乐">
+                                        音乐
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//fun.iqiyi.com" title="搞笑">
+                                        搞笑
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//f.iqiyi.com" title="时尚">
+                                        时尚
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//dv.iqiyi.com" title="原创">
+                                        原创
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/lvyou/" title="旅游">
+                                        旅游
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//paike.iqiyi.com" title="拍客">
+                                        拍客
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li data-pb="t=5">
+                                    <a href="//business.iqiyi.com" title="财经">
+                                        财经
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//mil.iqiyi.com" title="军事">
+                                        军事
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//tech.iqiyi.com" title="科技">
+                                        科技
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//www.iqiyi.com/manhua/" title="漫画">
+                                        漫画
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="//auto.iqiyi.com" title="汽车">
+                                        汽车
+                                    </a>
+                                </li>
+                                <li data-pb="t=5">
+                                    <a href="http://www.iqiyi.com/jilupian/" title="纪录片">
+                                        纪录片
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li>
+                                    <a href="//top.iqiyi.com" title="风云榜" data-pb="t=5">
+                                        风云榜
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//gongyi.iqiyi.com" title="公益" data-pb="t=5">
+                                        公益
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="http://www.iqiyi.com/lib/" data-pb="t=5" title="全网影视">
+                                        全网影视
+                                        <i class="dot">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="//so.iqiyi.com" data-pb="t=5" title="爱奇艺搜索">
+                                        爱奇艺搜索
+                                        <i class="dot">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="http://www.iqiyi.com/qiyichupin/" title="爱奇艺出品" data-pb="t=5">
+                                        爱奇艺出品
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li class="word-long">
+                                    <a href="//g.pps.tv" title="PPS游戏" data-pb="t=5">
+                                        PPS游戏
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="//x.pps.tv" title="PPS奇秀" data-pb="t=5">
+                                        PPS奇秀
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="//store.iqiyi.com" title="应用商店" data-pb="t=5">
+                                        应用商店
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.iqiyi.com/tese/" title="特色频道" data-pb="t=5">
+                                        特色频道
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="//mall.iqiyi.com" title="爱奇艺商城" data-pb="t=5">
+                                        爱奇艺商城
+                                    </a>
+                                </li>
+                                <li class="word-long">
+                                    <a href="http://www.iqiyi.com/u/" rel="nofollow" title="个人中心" data-pb="t=5">
+                                        个人中心
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="channelList_item clearfix">
+                                <li class="channel_vip">
+                                    <a href="//vip.iqiyi.com/?fc=b4df9faa4b31aec4" title="VIP会员">
+                                        <i class="icon-1x icon-2x icon-vip-new">
+                                        </i>
+                                        <span class="vip_tx">
+                                            VIP
+                                        </span>
+                                        <span class="vip_tx">
+                                            会员
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <iframe class="frame-topNav-player" frameborder="0">
+                    </iframe>
                 </div>
             </div>
         </div>
+        <!-- 导航结束 -->
         <script type="text/javascript">
             (function() {
                 var a = Q.$("#widget-userregistlogin"),
@@ -1008,25 +1170,25 @@
                     data-area="salmon" data-bucket="salmon20_freshness_ctr">
                         <div class="focus_imgs">
                             <ul class="focus_img_list" data-indexfocus-elem="bigPics" data-indexfocusplaybtn-from="0">
-                                <li style="display:block;opacity:1;background-image:url(images/a31580af2db4441398daa70584127c1c.jpg)">
+                                <li style="display:block;opacity:1;background-image:url(/video/images/a31580af2db4441398daa70584127c1c.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/650b414b9a8446e5aef9f89b39175c30.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/650b414b9a8446e5aef9f89b39175c30.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/65b7bae8248147a38eec5b9cd1665649.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/65b7bae8248147a38eec5b9cd1665649.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/37c2f60026d8499cad2680f24099230c.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/37c2f60026d8499cad2680f24099230c.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/6ec4c6783ccf4dafa74b9aec091ba776.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/6ec4c6783ccf4dafa74b9aec091ba776.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/372ceaaa80c240b68300ecc4403b82d6.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/372ceaaa80c240b68300ecc4403b82d6.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/df95eca8d42643c69dc00d1b0f2aad2b.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/df95eca8d42643c69dc00d1b0f2aad2b.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/de523d32e1554a68aea4a1ff4d97e31b.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/de523d32e1554a68aea4a1ff4d97e31b.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/4116cc81662e4402a89c499fce949110.jpg)">
+                                <li style="display:none;opacity:0;background-image:url(/video/images/4116cc81662e4402a89c499fce949110.jpg)">
                                 </li>
-                                <li style="display:none;opacity:0;background-image:url(images/43f658200fff4adba5ef82ab7a2e6530.jpg)"
+                                <li style="display:none;opacity:0;background-image:url(/video/images/43f658200fff4adba5ef82ab7a2e6530.jpg)"
                                 </li>
                             </ul>
                         </div>
@@ -1417,19 +1579,7 @@
                         </dl>
                     </div>
                     <div class="hy_ydBox">
-                        <img src="picture/vipdyr_wyf.jpg">
-                        <div class="hy_ydInner_r">
-                            <a class="dy_hyBtn" rseat="706082_VIP续费购买" href="http://vip.iqiyi.com/firstsix-new-pc.html?fv=zhc8647088e23e5d35de564853c70a2d"
-                            target="_blank">
-                                <span class="dy_hyKt_txt">
-                                    开通会员
-                                </span>
-                            </a>
-                            <a class="dy_vipMore_link" href="http://vip.iqiyi.com/firstsix-new-pc.html?fv=zhc8647088e23e5d35de564853c70a2d"
-                            rseat="706082_VIP续费购买" target="_blank">
-                                新用户首月6元>
-                            </a>
-                        </div>
+                        <img src="/video/picture/vipdyr_wyf.jpg">
                     </div>
                 </div>
             </div>
@@ -1469,16 +1619,8 @@
                 <div class="j_movie_tab_body j_slider">
                     <div class="site-item_l site-item_l_dyphb">
                         <div class="piclist-scroll piclist-scroll-h290">
-                            <div class="piclist_btnLeft">
-                                <a href="javascript:void(0);" class="disabled" rseat="706082_榜单left">
-                                </a>
-                            </div>
-                            <div class="piclist_btnRight">
-                                <a href="javascript:void(0);" rseat="706082_榜单right">
-                                </a>
-                            </div>
                             <div class="piclist-scroll-pic">
-                                <ul class="site-piclist" style="width: 4200px; margin-left: 0px;" data-widget-videolist="videolist">
+                                <ul class="site-piclist lists1" style="width: 4200px; margin-left: 0px;" data-widget-videolist="videolist">
                                     <li class="first_bigImg">
                                         <div data-videolist-elem="item" tvid="733646300" data-tvid="733646300"
                                         data-qipuid="733646300">
@@ -3375,14 +3517,6 @@
                 </div>
                 <div class="site-item_l">
                     <div class="piclist-scroll piclist-scroll-h290">
-                        <div class="piclist_btnLeft">
-                            <a href="javascript:void(0);" class="disabled" rseat="706082_最新上线left">
-                            </a>
-                        </div>
-                        <div class="piclist_btnRight">
-                            <a href="javascript:void(0);" rseat="706082_最新上线right">
-                            </a>
-                        </div>
                         <div class="piclist-scroll-pic">
                             <div class="wrapper-piclist">
                                 <ul class="site-piclist j_slider_list" style="width: 4200px; margin-left: 0px;"
@@ -4329,14 +4463,6 @@
                 </div>
                 <div class="site-item_l">
                     <div class="piclist-scroll piclist-scroll-h290">
-                        <div class="piclist_btnLeft">
-                            <a href="javascript:void(0);" class="disabled" rseat="706082_华语left" style="display: none;">
-                            </a>
-                        </div>
-                        <div class="piclist_btnRight">
-                            <a href="javascript:void(0);" rseat="706082_华语right" class="" style="display: block;">
-                            </a>
-                        </div>
                         <div class="piclist-scroll-pic">
                             <div class="wrapper-piclist">
                                 <ul class="site-piclist" style="width: 4200px; margin-left: 0px;" data-widget-videolist="videolist">
@@ -5603,10 +5729,6 @@
                             style="display: none;">
                             </a>
                         </div>
-                        <div class="piclist_btnRight">
-                            <a href="javascript:void(0);" rseat="706082_feedright">
-                            </a>
-                        </div>
                         <div class="piclist-scroll-pic">
                             <div class="wrapper-piclist">
                                 <ul class="site-piclist" data-widget-videolist="videolist" style="width: 4200px; margin-left: 0px;">
@@ -6473,7 +6595,7 @@
         <div id="block-F" data-block-name="二维码耳朵">
             <div class="baseScrollBar0217" id="scrollBar-menus">
                 <ul class="baseScrollBar0217_menus">
-                    <li data-item="totop" data-totopbtn-time=100 data-totopbtn-max=200 class="dn">
+                    <li data-item="totop" data-totopbtn-time=100 data-totopbtn-max=200>
                         <a href="javascript:;" class="baseToTop" rseat="702151_totop">
                             <i class="baseToTop-icon">
                             </i>
@@ -6482,23 +6604,13 @@
                             </span>
                         </a>
                     </li>
-                    <li data-item="feedback" class="dn">
+                    <li data-item="feedback">
                         <a href="http://www.iqiyi.com/common/helpandsuggest.html?entry=channel"
                         target="_blank" class="helpFeedback" rseat="702151_feedback_channel">
                             <i class="helpFeedback-icon">
                             </i>
                             <span>
                                 意见反馈
-                            </span>
-                        </a>
-                    </li>
-                    <li data-item="downloadmacorwin" class="dn">
-                        <a href="http://app.iqiyi.com/pc/player/index.html#pcplayer" target="_blank"
-                        class="pcaDown J_downloadMacOrWin" rseat="708141_downloadsw">
-                            <i class="pcaDown-icon">
-                            </i>
-                            <span>
-                                软件下载
                             </span>
                         </a>
                     </li>
@@ -6591,10 +6703,6 @@
                 </a>
                 All Rights Reserved
             </p>
-        </div>
-        <div style="display:none" id="i18nWebSelTip">
-        </div>
-        <div id="permovindex" style="display:none;">
         </div>
     </body>
 </html>

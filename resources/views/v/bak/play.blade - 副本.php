@@ -9,7 +9,6 @@
         <link href="/video/css/play-movie.css" rel="stylesheet" type="text/css">
         <link href="/video/css/play-movie.css" rel="stylesheet" type="text/css">
         <link href="/video/css/commentSys.css" rel="stylesheet" type="text/css">
-		<link href="/video/css/list.css" rel="stylesheet" type="text/css">
         <title>
             猩球崛起2：黎明之战-电影-高清完整版视频在线观看–爱奇艺
         </title>
@@ -18,10 +17,39 @@
         />
         <meta name="description" content="《猩球崛起2：黎明之战》是由马特·里夫斯导演，安迪·瑟金斯、杰森·克拉克、加里·奥德曼、凯丽·拉塞尔、托比·凯贝尔主演的电影。影片剧情简介：十年前，人类为自己的愚蠢付出惨痛代价，凶险致命的猿流感病毒蔓延全球，世界毁灭殆尽。而在毗邻旧金山的原始丛林，凯撒带领猩猩伙伴们建立起无忧无虑的王国，直到某一天，猩猩的家园的宁静再度被人类打破。在旧城..。"
         />
-        <script type="text/javascript" src="/video/js/sea1.2.js"></script>
-		<script type="text/javascript" src="/video/js/swfobject.js"></script>
-        <script type="text/javascript" src="/video/js/jquery.min.js"></script>
-        <!-- fl pr tucao-btn详情按钮 -->
+        <script type="text/javascript" src="/video/js/sea1.2.js">
+        </script>
+		<!-- fl pr tucao-btn详情按钮 -->
+        <script type="text/javascript">
+            window.Q = window.Q || {};
+            Q.PageInfo = Q.PageInfo || {};
+            Q.PageInfo.urlChange = "true";
+            Q.PageInfo.playPageInfo = {
+                albumId: 330590800,
+                tvId: 330590800,
+                cid: 1,
+                sourceId: 0,
+                featureAlbumId: 0,
+                vType: 'video',
+                pageNo: 1,
+                pageType: 'video',
+                userId: 0,
+                pageUrl: 'http://www.iqiyi.com/v_19rrn8kuv0.html',
+                tvName: "猩球崛起2：黎明之战",
+                isfeizhengpian: 'true',
+                categoryName: '电影',
+                advideo_qipuid: '330590800',
+                candownload: 'false',
+                albumPurType: 2,
+                tvYear: 0,
+                wallId: '',
+                qipuId: 330590800,
+                rewardAllowed: '0',
+
+                videoTemplate: '1'
+            };
+            Q.PageInfo.pageData = {};
+        </script>
     </head>
     
     <body class="qypage-980">
@@ -100,7 +128,7 @@
                 curLayout: 0
             };
         </script>
-        <span style="displayblack;" data-responsivelayout-param="qypage-980=_1180&qypage-1180=1180"
+        <span style="display:none;" data-responsivelayout-param="qypage-980=_1180&qypage-1180=1180"
         data-widget-responsivelayout="responsivelayout">
         </span>
         <script type="text/javascript">
@@ -176,7 +204,7 @@
                                             <a rseat="电视剧" href="//www.iqiyi.com/dianshiju/" data-widget="navdot"
                                             data-dot-cid="5">
                                                 电视剧
-                                                <i style="displayblack;" class="tip_dot" data-newicon="dot">
+                                                <i style="display:none;" class="tip_dot" data-newicon="dot">
                                                 </i>
                                             </a>
                                         </li>
@@ -529,7 +557,7 @@
                                 <!--上传-->
                                 <div class="topNav_upload" id="data-widget-parent" data-class="topNav_upload-nologin"
                                 data-widget="navdot" data-dot-cid="a">
-                                    <div class="icon-qidanTip" data-newicon="a" style="displayblack;">
+                                    <div class="icon-qidanTip" data-newicon="a" style="display:none;">
                                         <i class="nav_mag_dot">
                                         </i>
                                     </div>
@@ -555,7 +583,7 @@
                                                     <a href="javascript:void(0);" data-widget="navdot" data-dot-cid="b" j-delegate="uploadVideo"
                                                     rseat="tjup_load">
                                                         上传视频
-                                                        <i style="displayblack;" class="nav_mag_dot" data-newicon="b">
+                                                        <i style="display:none;" class="nav_mag_dot" data-newicon="b">
                                                         </i>
                                                     </a>
                                                 </li>
@@ -563,7 +591,7 @@
                                                     <a href="//www.iqiyi.com/u/editor/" rel="nofollow" data-widget="navdot"
                                                     data-dot-cid="c" rseat="tjup_editor">
                                                         制作视频
-                                                        <i style="displayblack;" class="nav_mag_dot" data-newicon="c">
+                                                        <i style="display:none;" class="nav_mag_dot" data-newicon="c">
                                                         </i>
                                                     </a>
                                                 </li>
@@ -623,7 +651,7 @@
                                     <!-- 头部 -->
                                     <span data-navmessagefloater-elem="title" class="toGeng">
                                         <!-- 角标 -->
-                                        <div style="displayblack;" class="icon-qidanTip" data-navmessagefloater-elem="numtip"
+                                        <div style="display:none;" class="icon-qidanTip" data-navmessagefloater-elem="numtip"
                                         data-navmsgtips-icon="icon">
                                             <i class="nav_mag_dot">
                                             </i>
@@ -650,7 +678,7 @@
                                                     <li class="selected" data-navmessagefloater-elem="tabtitle">
                                                         <a class="title_item" href="javascript:void(0);" rseat="更新提醒">
                                                             更新提醒
-                                                            <i class="title_item_tip" style="displayblack;" data-navmessagefloater-elem="num">
+                                                            <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
                                                             </i>
                                                         </a>
@@ -658,7 +686,7 @@
                                                     <li data-navmessagefloater-elem="tabtitle">
                                                         <a class="title_item" href="javascript:void(0);" rseat="与我相关">
                                                             与我相关
-                                                            <i class="title_item_tip" style="displayblack;" data-navmessagefloater-elem="num">
+                                                            <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
                                                             </i>
                                                         </a>
@@ -666,7 +694,7 @@
                                                     <li data-navmessagefloater-elem="tabtitle">
                                                         <a class="title_item" href="javascript:void(0);" rseat="系统通知">
                                                             系统通知
-                                                            <i class="title_item_tip" style="displayblack;" data-navmessagefloater-elem="num">
+                                                            <i class="title_item_tip" style="display:none;" data-navmessagefloater-elem="num">
                                                                 6
                                                             </i>
                                                         </a>
@@ -677,9 +705,9 @@
                                             <div class="nav_pop_main" data-playhistory-elem="navpopmain">
                                                 <div class="pop_main_inner" data-navmessagefloater-elem="tabbody">
                                                 </div>
-                                                <div class="pop_main_inner" style="displayblack;" data-navmessagefloater-elem="tabbody">
+                                                <div class="pop_main_inner" style="display:none;" data-navmessagefloater-elem="tabbody">
                                                 </div>
-                                                <div class="pop_main_inner" style="displayblack;" data-navmessagefloater-elem="tabbody">
+                                                <div class="pop_main_inner" style="display:none;" data-navmessagefloater-elem="tabbody">
                                                 </div>
                                             </div>
                                             <!-- 底部 -->
@@ -732,7 +760,7 @@
                                                 <div class="timeLine" data-playhistory-elem="timeline">
                                                 </div>
                                                 <!-- 播放记录-登录 -->
-                                                <div class="historytips" style="displayblack;" data-playhistory-elem="tip"
+                                                <div class="historytips" style="display:none;" data-playhistory-elem="tip"
                                                 data-name="exactRecord">
                                                     <div class="historytips-bg">
                                                     </div>
@@ -853,7 +881,7 @@
                                 <div data-widget-suggest="suggest" data-suggest-tip="" data-suggest-layout="0"
                                 class="searchbox" data-suggest-focusoutblacklist="iqiyi.com">
                                     <div data-widget-suggest="hotList">
-                                        <a title="战狼" href='http://so.iqiyi.com/so/q_战狼' target='_blank' style="displayblack;"
+                                        <a title="战狼" href='http://so.iqiyi.com/so/q_战狼' target='_blank' style="display:none;"
                                         data-suggest-elem="keyword">
                                         </a>
                                     </div>
@@ -868,6 +896,26 @@
                                             </span>
                                         </div>
                                     </form>
+                                    <div class="soResult dn" data-suggest-elem="soguide">
+                                        <div class="mod-tip-search">
+                                            <a class="tip_content" pb="t=20" pubarea="pcltdown_mac_search" target="black"
+                                            href="javascript:void(0);" j-delegate="getDownloadUrl">
+                                                使用Mac客户端，拒绝卡顿、发热，看片更有范！
+                                            </a>
+                                            <a class="tip_close" href="javascript:void();" j-delegate="close" pb="t=20"
+                                            rseat="1501271_cls">
+                                                ×
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="soResult" data-suggest-elem="body" style="display:none;">
+                                        <div class="soResult_con">
+                                            <ul class="soHistory_list" data-suggest-elem="historylist">
+                                            </ul>
+                                            <ul class="soResult_list soHot_list" data-suggest-elem="list">
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="nav_pop_single" data-navmsgtips-content="content">
@@ -892,19 +940,6 @@
                         </div>
                         <div id="jujiPlayWrap">
                             <div class="container pt10 padplay" style="position: relative;">
-							    <div id="comment-list">
-								    <ul>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									</ul>
-								</div>
                                 <div class="videoArea-flash clearfix" data-switchlight-disablescroll="true"
                                 data-widget-switchlight="light" style="position: relative;">
                                     <!-- flash播放器 start -->
@@ -912,6 +947,11 @@
                                         <!-- 播放器存放位置 -->
                                         <div class="close_light_bg" id="close_light_bg">
                                         </div>
+                                        <!--极酷阳光播放器/代码开始-->
+                                        <script type="text/javascript" src="/video/js/swfobject.js">
+                                        </script>
+                                        <script type="text/javascript" src="/video/js/jquery.min.js">
+                                        </script>
                                         <div class="video" id="CuPlayer">
                                             <b>
                                                 <img src="/video/images/loading.gif" />
@@ -951,88 +991,24 @@
                                             so.addVariable("JcScpAPauseH", "250"); //暂停广告高度
                                             so.addVariable("JcScpAPausePath", "/video/other/a300x250_01.jpg|/video/other/a300x250_02.jpg"); //暂停广告地址
                                             so.addVariable("JcScpAPauseLink", ""); //暂停广告链接
+
                                             so.write("CuPlayer");
-											
-											//文字广告
-											so.addVariable("ShowJcScpAMoveText", "no");
                                         </script>
-                                        <script type="text/javascript">
-                                            $(function() {
-                                                $('#jujiPlayListRight .listcontrol-btn').click(function() {
-                                                    $('#jujiPlayListRight').addClass('dn').hide();
-                                                    $('#jujiPlayListShow').removeClass('dn').show();
-                                                    $('#ply').css('width', '1160px');
-													$('#comment-list').width(1160);
-                                                });
-                                                $('#jujiPlayListShow').click(function() {
-                                                    $(this).addClass('dn').hide();
-                                                    $('#jujiPlayListRight').removeClass('dn').show();
-                                                    $('#ply').css('width', '880px');
-													$('#comment-list').width(880);
-                                                });
-												
-												//视频简介
-												var i = 0;
-												$('.vInfoSide-con .allDesLink').click(function(){
-												    i++;
-													if(i % 2 !== 0){
-													   var info = $(this).prev().attr('title');
-													   $(this).prev().attr('title',$(this).prev().html());
-													   $(this).prev().html(info);
-													   $(this).html('收起');
-													}else {
-													   var info = $(this).prev().attr('title');
-													   $(this).prev().attr('title',$(this).prev().html());
-													   $(this).prev().html(info);
-													   $(this).html('收起');
-													}
+										<script type="text/javascript">
+										    $(function(){
+											    $('#jujiPlayListRight').click(function(){
+												    $(this).addClass('dn').hide();
+													$('#jujiPlayListShow').removeClass('dn').show();
+													$('#ply').css('width','1160px');
+													
 												});
-												
-												//弹幕
-												$('#comment-list').bind("selectstart",function(){return false;});
-												var j = 0;
-												var timing = null;
-												var end = 1;
-												var info = ['xxxx','!!!','哎，就那样了','过得去','不错吧','赞一个','踩','顶','怎么说呢','不知道','还行吧','不好看']
-												function getNum(m,n){
-												    return Math.ceil(Math.random() * (n-m+1) + (m-1));
-												}
-												$('.danmuTit').next().click(function(){
-												    j++;
-													if (j % 2 == 0) {
-												        $(this).removeClass('switch_open');
-														//窗口关闭
-														$('#comment-list').hide();
-														clearInterval(timing);
-														
-													}else {
-													    $(this).addClass('switch_open');
-														//窗口开启
-														$('#comment-list').show();
-														var lists = $('#comment-list').find('span');
-														var i = 0;
-														timing = setInterval(function(){
-															for(var index=0;index <= lists.length - 1;index++){
-															    if(end && index){
-															        var speed = $(lists[index - 1]).offset().left + 100;
-																    if( speed > $(lists[index]).offset().left){
-																	    continue;
-																	}
-																}
-																var num = $(lists[index]).offset().left - 10;
-																$(lists[index]).offset({left:num});
-																if($(lists[index]).offset().left <= 0){
-																    end = 0;
-																	$(lists[index]).html(info[getNum(0,info.length - 1)]);
-																	num = $('#comment-list').find('ul').width();
-																	$(lists[index]).offset({left:num});
-																}
-															};
-														},100);
-													}
+												$('#jujiPlayListShow').click(function(){
+												    $(this).addClass('dn').hide();
+													$('#jujiPlayListRight').removeClass('dn').show();
+													$('#ply').css('width','880px');
 												});
-                                            });
-                                        </script>
+											});
+										</script>
                                     </div>
                                     <!-- flash播放器 end -->
                                     <!-- player left start -->
@@ -1058,33 +1034,6 @@
                                                     </i>
                                                 </a>
                                             </div>
-                                            <!-- 视频列表 -->
-                                            <div class="list">
-											<dl>
-											    <dt><h5 id="video-title">视频标题</h5></dt>
-											</dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(0);" ><img src="pic/pic01.jpg"><strong>1吉利集团宣传</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(1);" ><img src="pic/pic02.jpg"><strong>2吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(2);"><img src="pic/pic03.jpg"><strong>3全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(3);" ><img src="pic/pic04.jpg"><strong>4吉利集团宣传片</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(4);"><img src="pic/pic05.jpg"><strong>5吉利博瑞产品篇</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(5);" ><img src="pic/pic06.jpg"><strong>6全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(6);" ><img src="pic/pic07.jpg"><strong>7吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1589,15 +1538,67 @@
                                         <!-- 弹幕开关1 -->
                                         <div class="danmu-close fl">
                                             <div class="clearfix">
-                                                <h3 class="fl danmuTit" style="magin-left:20px">
+                                                <h3 class="fl danmuTit">
                                                     弹幕
                                                 </h3>
                                                 <!-- switch fl 关闭 -->
-                                                <a class="switch" style="margin-left:30px" href="javascript:void(0);" >
+                                                <a class="switch  fl switch_open" data-barrage-status="show" rseat="140743_opn"
+                                                href="javascript:void(0);" data-pb="qpid=431779800">
                                                 </a>
                                             </div>
                                         </div>
                                         <!-- 弹幕开关 end-->
+                                        <!-- 弹幕主内容区 123 -->
+                                        <div class="danmu-main fl">
+                                            <div data-barrage-panel="config" class="tucao-static pr">
+                                                
+                                                <!-- 开关引导 -->
+                                                <div class="guide-switch" style="display:none;" data-barrage-btntip="wrap">
+                                                    <p class="p-tip1">
+                                                    </p>
+                                                    <p class="p-tip2">
+                                                    </p>
+                                                </div>
+                                                <!-- 开关引导 end-->
+                                                <!-- 关闭引导 class替换为guide-switch-close -->
+                                            </div>
+                                            <span data-barrage-wrap="input" class="conduct-bar pr conduct-bar-v2 tucao-input-default">
+                                                <span class="inputAdd-smile">
+                                                    <input type="text" class="fl tucao-input " placeholder="发送弹幕一起high！" data-barrage-input="barrage"
+                                                    rseat="608241_input">
+                                                    <!-- 输入引导 -->
+                                                    <span style="display:none;" data-barrage-guide="tip">
+                                                    </span>
+                                                    <!-- 输入引导 end-->
+                                                </span>
+                                                <span class="dmNew_limit dn" data-barrage-limit="barrage">
+                                                    26/25
+                                                </span>
+                                                <div class="danmuLogin dn" id="danmuLogin">
+                                                    <p class="danmuLogin-info dn" id="danmuLoginInfo">
+                                                        <a href="javascript:void(0)" j-delegate="login" class="green">
+                                                            登录
+                                                        </a>
+                                                        或
+                                                        <a href="javascript:void(0)" j-delegate="regist" class="green">
+                                                            注册
+                                                        </a>
+                                                        后来一发吧！
+                                                    </p>
+                                                </div>
+                                            </span>
+                                            <!-- fl send_btnAct class发送 -->
+                                            <a data-pb="qpid=431779800" href="javascript:void(0);" class="fl send_btnAct"
+                                            data-barrage-send="barrage" style="display: block;">
+                                                发送
+                                            </a>
+                                            <a href="javascript:void(0);" class="fl countdown_btn dn" data-barrage-countdown="barrage">
+                                                5s
+                                            </a>
+                                            <div class="defShiel_popBox dn" data-barrage-module="custom">
+                                            </div>
+                                        </div>
+                                        <!-- 弹幕主内容区 end-->
                                     </qchunk>
                                 </div>
                             </div>
@@ -1661,9 +1662,7 @@
                                     </span>
                                 </div>
                                 <div class="mod-source clearfix">
-                                    <div style="display:inline-block;margin-right:20px;color:#ccc">
-                                        播放人气:100000000
-                                    </div>
+                                    <div style="display:inline-block;margin-right:20px;color:#ccc">播放人气:100000000</div>
                                     <div class="progInfo_msg fr">
                                         <a href="javascript:;" class="progInfo_detail_btn" data-widget-elem="synopsisBtn"
                                         rseat="701171_info">
@@ -1684,85 +1683,170 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- 简介浮层 start-->
-            <!-- 默认加dn，展示时去掉-->
-            <div class="mod-crumb_pop dn" style="display:black;" data-widget-elem="synopsisContent">
-                <div class="progInfo_pop_con clearfix">
-                    <div class="fl progInfo_pic">
-                        <a href="javascript:;" class="progInfo_pic_link disabled">
-                            <img width="100%" height="100%" src="picture/v_108751682_m_601_m5.jpg"
-                            alt="">
+                    <div class="wrapper-right rightPCAdv j_pca_pb" id="widget-appdown-random1"
+                    data-widget-appdown="container" data-private-display="block" style="display: block;"
+                    rseat="pcltdown_playl">
+                        <a target="_blank" rseat="pcltdown_playl" class="mod-appDownload mod-appDownload-play"
+                        href="//lotus.sp.iqiyi.com/ota?id=&amp;pubplatform=1&amp;pubarea=pcltdown_playl&amp;qipuid=&amp;u=&amp;pu="
+                        pubarea="pcltdown_playl" title="下载爱奇艺视频桌面版" data-widget-appdown="playpage"
+                        data-appdownlink-mac="//app.iqiyi.com/mac/player/index.html" data-appdownlink-win="//static.qiyi.com/ext/common/QIYImedia_0_06.exe"
+                        data-appdownlink-pad="//ota.iqiyi.com/adf/e26a2365931a4092aa5c1148472a5c10">
+                            <span class="appDownload_title">
+                                用爱奇艺视频桌面版
+                            </span>
+                            <span class="appDownload_desc">
+                                看视频，快三倍！
+                            </span>
                         </a>
                     </div>
-                    <div class="progInfo_txt">
-                        <p class="progInfo_rtp">
-                            <span class="type-tit">
-                                导演：
-                            </span>
-                            <span class="type-con">
-                                <a href="//www.iqiyi.com/lib/s_206969505.html" rseat="director_1" target="_blank"
-                                title="马特·里夫斯">
-                                    马特·里夫斯
-                                </a>
-                            </span>
-                        </p>
-                        <p class="progInfo_rtp">
-                            <span class="type-tit">
-                                主演：
-                            </span>
-                            <span class="type-con">
-                                <a href="//www.iqiyi.com/lib/s_214497005.html" rseat="host1" target="_blank"
-                                title="安迪·瑟金斯">
-                                    安迪·瑟金斯
-                                </a>
-                                <span class="type-con_div">
-                                    饰 凯撒/
+                    <div class="wrapper-right rightPCAdv j_pca_pb" rseat="pcltdown_playl"
+                    id="widget-randomad-container" data-widget-appdown="container" style="overflow: hidden; width: 280px; display: block; visibility: hidden; height: 0px;"
+                    data-display-after="5">
+                        <div id="1000000000536">
+                            <a target="_blank" class="mod-appDownload mod-appDownload-play" href="//lotus.sp.iqiyi.com/ota?id=&pubplatform=1&pubarea=pcltdown_playl&qipuid=&u=&pu="
+                            pubarea="pcltdown_playl" title="下载爱奇艺视频桌面版" data-widget-appdown="playpage"
+                            data-appdownlink-mac="//app.iqiyi.com/mac/player/index.html" data-appdownlink-win="//static.qiyi.com/ext/common/QIYImedia_0_06.exe"
+                            data-appdownlink-pad="//ota.iqiyi.com/adf/e26a2365931a4092aa5c1148472a5c10"
+                            rseat="pcltdown_playl">
+                                <span class="appDownload_title">
+                                    用爱奇艺视频桌面版
                                 </span>
-                                <a href="//www.iqiyi.com/lib/s_215447005.html" rseat="host2" target="_blank"
-                                title="杰森·克拉克">
-                                    杰森·克拉克
-                                </a>
-                                <span class="type-con_div">
-                                    饰 马尔科姆/
+                                <span class="appDownload_desc">
+                                    看视频，快三倍！
                                 </span>
-                                <a href="//www.iqiyi.com/lib/s_214322405.html" rseat="host3" target="_blank"
-                                title="加里·奥德曼">
-                                    加里·奥德曼
-                                </a>
-                                <span class="type-con_div">
-                                    饰 德雷福斯/
-                                </span>
-                                <a href="//www.iqiyi.com/lib/s_214888905.html" rseat="host4" target="_blank"
-                                title="凯丽·拉塞尔">
-                                    凯丽·拉塞尔
-                                </a>
-                                <span class="type-con_div">
-                                    饰 埃莉/
-                                </span>
-                                <a href="//www.iqiyi.com/lib/s_214713005.html" rseat="host5" target="_blank"
-                                title="托比·凯贝尔">
-                                    托比·凯贝尔
-                                </a>
-                                <span class="type-con_div">
-                                    饰 科巴
-                                </span>
-                            </span>
-                        </p>
-                        <p class="progInfo_intr " data-elem-ishide="true" id="data-videoInfoDes-wrap">
-                            <span class="type-tit">
-                                简介：
-                            </span>
-                            <span class="type-con" data-elem-iscut="true" id="data-videoInfoDes">
-                                十年前，人类为自己的愚蠢付出惨痛代价，凶险致命的猿流感病毒蔓延全球，世界毁灭殆尽。而在毗邻旧金山的原始丛林，凯撒带领猩猩伙伴们建立起无忧无虑的王国，直到某一天，猩猩的家园的宁静再度被人类打破。在旧城苟延残喘的人类面临能源危机，他们试图利用森林腹地大坝的发电站提供能源。青年科学家马尔科姆试图说服聚集地负责人德里弗斯，希望通过和平手段取得猩猩部落的信任和同意。然而凯撒的好盟友科巴却无法摒除对人类的憎恨，他尝试着挑战者凯撒的权威。
-                            </span>
-                        </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <!-- 简介浮层 start-->
+                <!-- 默认加dn，展示时去掉-->
+                <div class="mod-crumb_pop" style="display:none;" data-widget-elem="synopsisContent">
+                    <div class="progInfo_pop_con clearfix">
+                        <div class="fl progInfo_pic">
+                            <a href="javascript:;" class="progInfo_pic_link disabled">
+                                <img width="100%" height="100%" src="picture/v_108751682_m_601_m5.jpg"
+                                alt="">
+                            </a>
+                        </div>
+                        <div class="progInfo_txt">
+                            <div class="progInfo_rtp dn" id="widget-bigvip" data-fg="1" data-widget-follow="bigvip">
+                                <span class="type-tit">
+                                    上传者：
+                                </span>
+                                <span class="type-con">
+                                    <a href="//www.iqiyi.com/dianying/index.html" data-bigvip-elem="name"
+                                    rseat="qi_qq1011" title="电影" target="_blank">
+                                        电影
+                                    </a>
+                                </span>
+                                <div class="short-userCare ml10 clearfix">
+                                    <div class="short-userCare-btn fl" data-bigvip-elem="subscribe">
+                                        <span class="top-yc_userCare">
+                                            <a data-state-change="true" class="btn-care btn-care-tocare" href="javascript:void(0);"
+                                            title="" data-userid="1062086651" data-state="2" style="cursor: pointer;">
+                                                <i class="site-icons icon-cared">
+                                                </i>
+                                                <i class="site-icons icon-eachother">
+                                                </i>
+                                                <span rseat="14080809_p_desclk" class="btn-care_tx btn-care_tx-care">
+                                                    订阅
+                                                </span>
+                                                <span rseat="14080809_p_desclk" class="btn-care_tx btn-care_tx-tocare">
+                                                    + 订阅
+                                                </span>
+                                                <span class="btn-care_tx btn-care_tx-cared" rseat="">
+                                                    已订阅
+                                                </span>
+                                                <span class="btn-care_tx btn-care_tx-caredEachother">
+                                                    相互订阅
+                                                </span>
+                                                <i class="icon-loading">
+                                                    <img width="15" height="15" src="picture/site-loading.gif" alt="loading">
+                                                </i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="short-userCare-peo fl" id="widget-vshort-numwrap">
+                                        <p data-bigvip-elem="fansnum" num="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="progInfo_rtp">
+                                <span class="type-tit">
+                                    导演：
+                                </span>
+                                <span class="type-con">
+                                    <a href="//www.iqiyi.com/lib/s_206969505.html" rseat="director_1" target="_blank"
+                                    title="马特·里夫斯">
+                                        马特·里夫斯
+                                    </a>
+                                </span>
+                            </p>
+                            <p class="progInfo_rtp">
+                                <span class="type-tit">
+                                    主演：
+                                </span>
+                                <span class="type-con">
+                                    <a href="//www.iqiyi.com/lib/s_214497005.html" rseat="host1" target="_blank"
+                                    title="安迪·瑟金斯">
+                                        安迪·瑟金斯
+                                    </a>
+                                    <span class="type-con_div">
+                                        饰 凯撒/
+                                    </span>
+                                    <a href="//www.iqiyi.com/lib/s_215447005.html" rseat="host2" target="_blank"
+                                    title="杰森·克拉克">
+                                        杰森·克拉克
+                                    </a>
+                                    <span class="type-con_div">
+                                        饰 马尔科姆/
+                                    </span>
+                                    <a href="//www.iqiyi.com/lib/s_214322405.html" rseat="host3" target="_blank"
+                                    title="加里·奥德曼">
+                                        加里·奥德曼
+                                    </a>
+                                    <span class="type-con_div">
+                                        饰 德雷福斯/
+                                    </span>
+                                    <a href="//www.iqiyi.com/lib/s_214888905.html" rseat="host4" target="_blank"
+                                    title="凯丽·拉塞尔">
+                                        凯丽·拉塞尔
+                                    </a>
+                                    <span class="type-con_div">
+                                        饰 埃莉/
+                                    </span>
+                                    <a href="//www.iqiyi.com/lib/s_214713005.html" rseat="host5" target="_blank"
+                                    title="托比·凯贝尔">
+                                        托比·凯贝尔
+                                    </a>
+                                    <span class="type-con_div">
+                                        饰 科巴
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="progInfo_tag" id="data-videopoint" data-qipuid="330590800" data-area="azalea"
+                            data-numshow="6" data-numlimit="10" data-elem-nochange="true">
+                                <span class="type-tit">
+                                    看点：
+                                </span>
+                                <span class="type-con" id="data-vpointlist">
+                                </span>
+                            </p>
+                            <p class="progInfo_intr " data-elem-ishide="true" id="data-videoInfoDes-wrap">
+                                <span class="type-tit">
+                                    简介：
+                                </span>
+                                <span class="type-con" data-elem-iscut="true" id="data-videoInfoDes">
+                                    十年前，人类为自己的愚蠢付出惨痛代价，凶险致命的猿流感病毒蔓延全球，世界毁灭殆尽。而在毗邻旧金山的原始丛林，凯撒带领猩猩伙伴们建立起无忧无虑的王国，直到某一天，猩猩的家园的宁静再度被人类打破。在旧城苟延残喘的人类面临能源危机，他们试图利用森林腹地大坝的发电站提供能源。青年科学家马尔科姆试图说服聚集地负责人德里弗斯，希望通过和平手段取得猩猩部落的信任和同意。然而凯撒的好盟友科巴却无法摒除对人类的憎恨，他尝试着挑战者凯撒的权威。
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 短视频简介浮层 end-->
+                <!-- 播放量浮层 start-->
             </div>
-            <!-- 短视频简介浮层 end-->
-        </div>
         </div>
         <!-- 标题区 end-->
         </div>
@@ -1770,7 +1854,7 @@
         <div id="movie-score-show">
         </div>
         <div class="wrapper wrapper-dianying" data-content-wrapper="wrapper">
-            <div style="displayblack;" id="check-is-movie-tpl">
+            <div style="display:none;" id="check-is-movie-tpl">
             </div>
             <div data-pb="tmplt=longmovietplt" data-relate-widget="relateMovie" data-anchor-elem="relatedvideo"
             id="block-F" class="" data-asyn-pb="true">
@@ -1800,7 +1884,7 @@
                         <div id="1000000000321" style="height:0;width:1;margin:0;overflow:hidden;display:none;">
                         </div>
                         <div id="widget-promotionad-con" data-img-param="posterURL" class="popularize popularize-160210 site-piclist-mix"
-                        data-qiyu-elem="promotionad" style="displayblack;">
+                        data-qiyu-elem="promotionad" style="display:none;">
                         </div>
                         <div data-qiyu-elem="list">
                             <ul class="site-piclist site-piclist-160210 site-piclist-160210Tr site-piclist-160210-describe">
@@ -2831,7 +2915,7 @@
                                                                         <div class="sayReview_import">
                                                                             <textarea class="form-textarea-comment" data-elem-content="content" placeholder="我来说两句..">
                                                                             </textarea>
-                                                                            <div class="feed-submit-success" data-elem-tip="succ" style="displayblack;">
+                                                                            <div class="feed-submit-success" data-elem-tip="succ" style="display:none;">
                                                                                 <i class="csIcon csIcon-feed-submit-success">
                                                                                 </i>
                                                                                 <em class="desc">
@@ -6717,6 +6801,39 @@
                     </div>
                     <!-- -->
                 </div>
+                <div class="wrapper-piclist wrapper-piclist-spread mb30" data-pb="tmplt=longmovietplt"
+                id="block-J">
+                    <div class="data-slide-responsive" id="widget-iqiyi-hot" data-hot-area="rabbit"
+                    data-hot-cid="-1" data-slide-name="qiyihot" data-slide-disablewheel="true"
+                    data-slide-dura="0" data-slide-disp="5" data-slide-step="4" data-slide-itemfocusclass="selcss"
+                    data-slide-enablescroll="true" data-slide-lbtnclass="disabled" data-slide-rbtnclass="disabled"
+                    data-slide-usedefaultoffset="true">
+                        <div class="play-title mb15 mt25" data-hot-elem="title" style="display:none;">
+                            <h2 class="play-title-bd">
+                                爱奇艺热播
+                            </h2>
+                        </div>
+                        <div class="play-tv-grid" data-hot-elem="cont" style="display:none;">
+                            <div class="gridCtrol gridCtrol-160210">
+                                <a class="disabled" data-slide-elem="pbtn" href="javascript:void(0);">
+                                    <i class="p-arrL">
+                                    </i>
+                                </a>
+                                <a data-slide-elem="nbtn" href="javascript:void(0);">
+                                    <i class="p-arrR">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="site-piclist-160210-visibleW">
+                                <div class="site-piclist-160210-scrollW" data-slide-elem="content">
+                                    <ul class="site-piclist site-piclist-160210 site-piclist-160210-describe play-tv-grid"
+                                    data-slide-elem="list" data-hot-elem="list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="wrapper-right">
                 <div data-pb="tmplt=longmovietplt" id="block-K" data-asyn-pb="true" data-elem-fengyunbang="fengyunbang">
@@ -8345,6 +8462,17 @@
                 </div>
             </div>
         </div>
+        <!-- -->
+        <!-- 责任编辑 start -->
+        <div class="mod-footer-editor footer-editor-dy" id="widget-editorincharge"
+        style="display:none;">
+            <p class="editor_txt">
+                责任编辑：
+                <span>
+                </span>
+            </p>
+        </div>
+        <!-- 责任编辑 end -->
         <div class="footerN1214" data-css="fragments/block_footerN1214.css" data-widget-footer="footer"
         id="block-Z" data-block-name="页底">
             <div class="footmenu">
@@ -8428,6 +8556,250 @@
                 All Rights Reserved
             </p>
         </div>
+        <div style="display:none" id="i18nWebSelTip">
+        </div>
+        <!--js title-->
+        <div id="widget-videochage-title" data-title-shorttitle="电影-高清完整版视频在线观看–爱奇艺"
+        data-title-prefix="" data-title-end="" style="display:none;">
+        </div>
+        <!-- -->
+        <!--开关灯-->
+        <div class="newDot" id="j-widget-switchLightWrap" data-widget-switchlight="darkArea"
+        style="z-index: 5400; width:100%; height: 2595px; display: none; opacity: 1;">
+            <a class="newDotLink" style="z-index: 5450; display: none;" data-private-display="block">
+            </a>
+        </div>
+        <div data-sharecopy-popup="popup" style="display:none;">
+            <div class="gui_Cancel_box">
+            </div>
+            <div class="gui_Cancel">
+                <p class="p1 c666" rseat="cancel">
+                    您使用浏览器不支持直接复制的功能，建议您使用Ctrl+C或右键全选进行地址复制
+                </p>
+                <p class="p2">
+                    <a data-sharecopy-popupconfirm="confirm" j-delegate="confirm_apply" href="#"
+                    class="w82Btn" rseat="konw">
+                        我知道了
+                    </a>
+                </p>
+            </div>
+        </div>
+        <!--download-->
+        <div data-videodownload-elem="tip" style="display:black;" data-height="187">
+            <iframe style="width:212px;height:48px;width:0\9;height:0\9;*width:0;*height:0;position:absolute;left:-1px;top:-1px;">
+            </iframe>
+        </div>
+        <div class="popup-jujiBox" id="data-widget-downloadSelectWrap" style="display:none;">
+            <div class="popup-jujiBG">
+            </div>
+            <div class="popup-juji" id="data-widget-downloadSelect" data-widget="tab"
+            data-tabname="selectbox">
+                <h3>
+                    选择您要下载的《
+                    <span id="data-videodownload-title">
+                    </span>
+                    》剧集：
+                </h3>
+                <a id="data-videodownload-close" href="javascript:void(0);" class="np_btn btn_close cloBtn-juji">
+                </a>
+                <div class="popup-jujiNav">
+                    <ul class="popup-juji-tab" id="data-downloadSelect-titleWrap">
+                    </ul>
+                </div>
+                <div class="poup-jujiBtn" id="data-downloadSelect-btnWrap">
+                    <a class="btn_new btn_gray_s" href="javascript:void(0);" id="data-videodownload-selectAll">
+                        <span class="left_pd">
+                            全选
+                        </span>
+                    </a>
+                    <a data-videodownload-albumid="" data-videodownload-tvname="" class="btn_new btn_green_m pdL118"
+                    id="data-videodownload-downBtn" href="javascript:void(0);">
+                        <span class="left_pd" alt="点击下载此片" title="点击下载此片">
+                            下载
+                        </span>
+                        <span class="gxBg" id="data-downloadSelect-counterWrap" style="display:none;">
+                            <span class="gxNum">
+                            </span>
+                            <em id="data-downloadSelect-counter">
+                            </em>
+                        </span>
+                    </a>
+                    <span id="data-videodownload-warn" class="EB6100" style="display:none;">
+                        一次最多下载75集，请分次下载
+                    </span>
+                    <span id="data-videodownload-empty" class="EB6100" style="display:none;">
+                        请选择下载剧集
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--调查问卷-->
+        <div id="1000000000311" style="height:0;width:1;margin:0;overflow:hidden;display:none;">
+        </div>
+        <!--profile引导用户-->
+        <div class="nav-profile-tip-box" id="nav-profile-guide" style="display:none">
+            <div class="nav-profile-tip">
+                <div class="profile-inner">
+                    <span class="nav-login_arrow">
+                        <i class="tip_outer">
+                        </i>
+                        <i class="tip_inner">
+                        </i>
+                    </span>
+                    <a href="#" class="profile-colse" j-delegate="hideProfileGuide">
+                        ×
+                    </a>
+                    <div class="profile-bd">
+                        <div class="profile-tip">
+                            全家共用一个账号，播放记录太混乱？
+                        </div>
+                        <a href="javascript:void(0)" data-profile-entry="3" class="profile-btn"
+                        j-delegate="createProfile">
+                            +创建家庭成员账号
+                        </a>
+                        <div class="profile-info">
+                            <p>
+                                独立的个性化推荐，会员福利共享
+                            </p>
+                            <!--播放页 播放记录页 电影个性化页面-->
+                            <p class="green">
+                                已有50万用户创建了家庭成员账号
+                            </p>
+                            <!--播放页 播放记录页 电影个性化页面-->
+                        </div>
+                    </div>
+                </div>
+                <iframe data-elem="bg" class="frameLayer">
+                </iframe>
+            </div>
+        </div>
+        <!--profile引导用户-->
+        <div class="hb_cover" style="display:black;">
+        </div>
+        <div id="data-vip-remindbox" data-Boss-categoryid="1" data-Boss-player="player"
+        style="display:none;">
+        </div>
+        <span id="widget-loadclient" style="display:none;">
+        </span>
+        <!-- 二维码耳朵 start -->
+        <div id="block-F" data-block-name="二维码耳朵">
+            <div class="baseScrollBar0217" id="scrollBar-menus">
+                <ul class="baseScrollBar0217_menus">
+                    <li style="display:none" data-player-dragwatch="dragwatch">
+                        <a href="javascript:;" class="smallWindow" rseat="701163_miniopen">
+                            <i class="smallWindow-icon">
+                            </i>
+                            <span>
+                                小窗观看
+                            </span>
+                        </a>
+                    </li>
+                    <li data-item="totop" data-totopbtn-time=100 data-totopbtn-max=200 class="dn">
+                        <a href="javascript:;" class="baseToTop" rseat="702151_totop">
+                            <i class="baseToTop-icon">
+                            </i>
+                            <span>
+                                回到顶部
+                            </span>
+                        </a>
+                    </li>
+                    <li data-item="feedback" class="dn">
+                        <a href="//www.iqiyi.com/common/helpandsuggest.html?entry=bfyeding" target="_blank"
+                        class="helpFeedback" rseat="702151_feedback_bfyeding">
+                            <i class="helpFeedback-icon">
+                            </i>
+                            <span>
+                                意见反馈
+                            </span>
+                        </a>
+                    </li>
+                    <li data-item="downloadmacorwin" class="dn">
+                        <a href="//app.iqiyi.com/pc/player/index.html#pcplayer" target="_blank"
+                        class="pcaDown J_downloadMacOrWin" rseat="708141_downloadsw">
+                            <i class="pcaDown-icon">
+                            </i>
+                            <span>
+                                软件下载
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 二维码耳朵 end -->
+        <script>
+            var _hmt = _hmt || []; (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?53b7374a63c37483e5dd97d78d9bb36e";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <!-- sharecopy -->
+        <div style="display:none;">
+            <div class="gui_Cancel_box">
+            </div>
+            <div class="gui_Cancel">
+                <p class="p1 c666">
+                    您使用浏览器不支持直接复制的功能，建议您使用Ctrl+C或右键全选进行地址复制
+                </p>
+                <p class="p2">
+                    <a data-sharecopy-popupconfirm="confirm" j-delegate="confirm_apply" href="#"
+                    class="w82Btn">
+                        我知道了
+                    </a>
+                </p>
+            </div>
+        </div>
+        <!-- sharecopy End -->
+        <div class="pointPop_con619" data-widget-sharethirdparty="weixin" data-sharethirdparty-videoname=""
+        style="display:none;" data-sharethirdparty-url="">
+            <h3>
+                分享到
+                <span data-sharethirdparty-pf="pf">
+                    微信
+                </span>
+                <a href="#" data-sharethirdparty-ele="close" class="np_btn btn_close">
+                </a>
+            </h3>
+            <div class="pointPop_content">
+                <h4 data-sharethirdparty-ele="videoname">
+                </h4>
+                <p class="title_wx">
+                    将视频分享给
+                    <span data-sharethirdparty-pf="pf">
+                        微信
+                    </span>
+                    好友或
+                    <span data-sharethirdparty-pf="pf">
+                        微信
+                    </span>
+                    好友圈。
+                </p>
+                <p>
+                    <a style="position:relative;z-index:10;" href="#" data-sharethirdparty-ele="ptcls"
+                    class="wx-code">
+                        <img src="" data-sharethirdparty-ele="qrimage">
+                    </a>
+                </p>
+                <p>
+                    使用
+                    <span data-sharethirdparty-pf="pf">
+                        微信
+                    </span>
+                    扫一扫
+                </p>
+            </div>
+            <!--微信图片-->
+            <div class="guide_positon" data-sharethirdparty-ele="weixinfly">
+                <img src="picture/453be18f554d4fb494788a828ca65212.png" />
+            </div>
+            <!--ie6微信图片-->
+            <div class="guide_positon" data-sharethirdparty-ele="ie6weixin">
+                <img src="picture/84cdf6ca64db4ac29fcc8e6c3c96a20d.jpg" />
+            </div>
+            <div class="guideTrigger" data-sharethirdparty-ele="anim">
+            </div>
+        </div>
     </body>
-
 </html>

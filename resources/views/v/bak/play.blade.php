@@ -9,7 +9,6 @@
         <link href="/video/css/play-movie.css" rel="stylesheet" type="text/css">
         <link href="/video/css/play-movie.css" rel="stylesheet" type="text/css">
         <link href="/video/css/commentSys.css" rel="stylesheet" type="text/css">
-		<link href="/video/css/list.css" rel="stylesheet" type="text/css">
         <title>
             猩球崛起2：黎明之战-电影-高清完整版视频在线观看–爱奇艺
         </title>
@@ -18,10 +17,39 @@
         />
         <meta name="description" content="《猩球崛起2：黎明之战》是由马特·里夫斯导演，安迪·瑟金斯、杰森·克拉克、加里·奥德曼、凯丽·拉塞尔、托比·凯贝尔主演的电影。影片剧情简介：十年前，人类为自己的愚蠢付出惨痛代价，凶险致命的猿流感病毒蔓延全球，世界毁灭殆尽。而在毗邻旧金山的原始丛林，凯撒带领猩猩伙伴们建立起无忧无虑的王国，直到某一天，猩猩的家园的宁静再度被人类打破。在旧城..。"
         />
-        <script type="text/javascript" src="/video/js/sea1.2.js"></script>
-		<script type="text/javascript" src="/video/js/swfobject.js"></script>
-        <script type="text/javascript" src="/video/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/video/js/sea1.2.js">
+        </script>
         <!-- fl pr tucao-btn详情按钮 -->
+        <script type="text/javascript">
+            window.Q = window.Q || {};
+            Q.PageInfo = Q.PageInfo || {};
+            Q.PageInfo.urlChange = "true";
+            Q.PageInfo.playPageInfo = {
+                albumId: 330590800,
+                tvId: 330590800,
+                cid: 1,
+                sourceId: 0,
+                featureAlbumId: 0,
+                vType: 'video',
+                pageNo: 1,
+                pageType: 'video',
+                userId: 0,
+                pageUrl: 'http://www.iqiyi.com/v_19rrn8kuv0.html',
+                tvName: "猩球崛起2：黎明之战",
+                isfeizhengpian: 'true',
+                categoryName: '电影',
+                advideo_qipuid: '330590800',
+                candownload: 'false',
+                albumPurType: 2,
+                tvYear: 0,
+                wallId: '',
+                qipuId: 330590800,
+                rewardAllowed: '0',
+
+                videoTemplate: '1'
+            };
+            Q.PageInfo.pageData = {};
+        </script>
     </head>
     
     <body class="qypage-980">
@@ -892,19 +920,6 @@
                         </div>
                         <div id="jujiPlayWrap">
                             <div class="container pt10 padplay" style="position: relative;">
-							    <div id="comment-list">
-								    <ul>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									    <li><span>12678673</span></li>
-									</ul>
-								</div>
                                 <div class="videoArea-flash clearfix" data-switchlight-disablescroll="true"
                                 data-widget-switchlight="light" style="position: relative;">
                                     <!-- flash播放器 start -->
@@ -912,6 +927,11 @@
                                         <!-- 播放器存放位置 -->
                                         <div class="close_light_bg" id="close_light_bg">
                                         </div>
+                                        <!--极酷阳光播放器/代码开始-->
+                                        <script type="text/javascript" src="/video/js/swfobject.js">
+                                        </script>
+                                        <script type="text/javascript" src="/video/js/jquery.min.js">
+                                        </script>
                                         <div class="video" id="CuPlayer">
                                             <b>
                                                 <img src="/video/images/loading.gif" />
@@ -952,85 +972,20 @@
                                             so.addVariable("JcScpAPausePath", "/video/other/a300x250_01.jpg|/video/other/a300x250_02.jpg"); //暂停广告地址
                                             so.addVariable("JcScpAPauseLink", ""); //暂停广告链接
                                             so.write("CuPlayer");
-											
-											//文字广告
-											so.addVariable("ShowJcScpAMoveText", "no");
                                         </script>
                                         <script type="text/javascript">
                                             $(function() {
-                                                $('#jujiPlayListRight .listcontrol-btn').click(function() {
-                                                    $('#jujiPlayListRight').addClass('dn').hide();
+                                                $('#jujiPlayListRight').click(function() {
+                                                    $(this).addClass('dn').hide();
                                                     $('#jujiPlayListShow').removeClass('dn').show();
                                                     $('#ply').css('width', '1160px');
-													$('#comment-list').width(1160);
+
                                                 });
                                                 $('#jujiPlayListShow').click(function() {
                                                     $(this).addClass('dn').hide();
                                                     $('#jujiPlayListRight').removeClass('dn').show();
                                                     $('#ply').css('width', '880px');
-													$('#comment-list').width(880);
                                                 });
-												
-												//视频简介
-												var i = 0;
-												$('.vInfoSide-con .allDesLink').click(function(){
-												    i++;
-													if(i % 2 !== 0){
-													   var info = $(this).prev().attr('title');
-													   $(this).prev().attr('title',$(this).prev().html());
-													   $(this).prev().html(info);
-													   $(this).html('收起');
-													}else {
-													   var info = $(this).prev().attr('title');
-													   $(this).prev().attr('title',$(this).prev().html());
-													   $(this).prev().html(info);
-													   $(this).html('收起');
-													}
-												});
-												
-												//弹幕
-												$('#comment-list').bind("selectstart",function(){return false;});
-												var j = 0;
-												var timing = null;
-												var end = 1;
-												var info = ['xxxx','!!!','哎，就那样了','过得去','不错吧','赞一个','踩','顶','怎么说呢','不知道','还行吧','不好看']
-												function getNum(m,n){
-												    return Math.ceil(Math.random() * (n-m+1) + (m-1));
-												}
-												$('.danmuTit').next().click(function(){
-												    j++;
-													if (j % 2 == 0) {
-												        $(this).removeClass('switch_open');
-														//窗口关闭
-														$('#comment-list').hide();
-														clearInterval(timing);
-														
-													}else {
-													    $(this).addClass('switch_open');
-														//窗口开启
-														$('#comment-list').show();
-														var lists = $('#comment-list').find('span');
-														var i = 0;
-														timing = setInterval(function(){
-															for(var index=0;index <= lists.length - 1;index++){
-															    if(end && index){
-															        var speed = $(lists[index - 1]).offset().left + 100;
-																    if( speed > $(lists[index]).offset().left){
-																	    continue;
-																	}
-																}
-																var num = $(lists[index]).offset().left - 10;
-																$(lists[index]).offset({left:num});
-																if($(lists[index]).offset().left <= 0){
-																    end = 0;
-																	$(lists[index]).html(info[getNum(0,info.length - 1)]);
-																	num = $('#comment-list').find('ul').width();
-																	$(lists[index]).offset({left:num});
-																}
-															};
-														},100);
-													}
-												});
                                             });
                                         </script>
                                     </div>
@@ -1059,32 +1014,191 @@
                                                 </a>
                                             </div>
                                             <!-- 视频列表 -->
-                                            <div class="list">
-											<dl>
-											    <dt><h5 id="video-title">视频标题</h5></dt>
-											</dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(0);" ><img src="pic/pic01.jpg"><strong>1吉利集团宣传</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(1);" ><img src="pic/pic02.jpg"><strong>2吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(2);"><img src="pic/pic03.jpg"><strong>3全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(3);" ><img src="pic/pic04.jpg"><strong>4吉利集团宣传片</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(4);"><img src="pic/pic05.jpg"><strong>5吉利博瑞产品篇</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(5);" ><img src="pic/pic06.jpg"><strong>6全新帝豪概念车隆重发布</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-  <dl>
-  <dt><a href="#" onclick="changeStream(6);" ><img src="pic/pic07.jpg"><strong>7吉利博瑞牙克石冰雪测试</strong><span>发布日期：2015.03.25</span></a></dt>
-  </dl>
-</div>
+                                            <div class="play_rs_con" data-scrollwrap="dyAndTrailers" data-widget-scrollcont="cont"
+                                            style="height: 374px;">
+                                                <!--相关视频 start -->
+                                                <div data-widget-qiyu="zebra" data-qiyu-requeststatus="0" data-qiyu-rltnum="10"
+                                                data-qiyu-numofcutname="60" data-qiyu-withrefer="true" data-qiyu-domain="www"
+                                                data-qiyu-area="zebra" data-qiyu-categoryid="1" data-qiyu-vfrm="3-2-zebra-1"
+                                                data-qiyu-tpler="art" data-qiyu-isrelatedvideo="true" data-qiyu-focustoself="false">
+                                                    <h2 class="play_rs_title textOverflow" style="margin:10px 0px;font-size:16px;border-bottom:solid 1px #666">
+                                                        相关视频
+                                                    </h2>
+                                                    <ul data-qiyu-elem="list" class="mod-play-list mod-play-listBor">
+                                                        <li class="" data-videolist-aid="333950700" data-vid="" data-qiyu-idx="0"
+                                                        data-qiyu-source="0">
+                                                            <div class="borCon clearfix">
+                                                                <div class="pic-left">
+                                                                    <a class="piclist_img" href="#"
+                                                                    title="红珊瑚" rseat="related-pic-1">
+                                                                        <img src="#"
+                                                                        alt="红珊瑚" rseat="related-img-1" width="116" height="65">
+                                                                        <p class="video_position video_rb">
+                                                                            <span class="v_name" rseat="related_tl">
+                                                                                01:50:53
+                                                                            </span>
+                                                                        </p>
+                                                                        <p class="video_on_border">
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="con-right">
+                                                                    <h3>
+                                                                        <a href="#" title="红珊瑚"
+                                                                        rseat="related-title-1">
+                                                                            红珊瑚
+                                                                        </a>
+                                                                    </h3>
+                                                                    <p rseat="playcount">
+                                                                        <i class="site-icons icon-playB">
+                                                                        </i>
+                                                                        <span data-pc-albumid="333950700" rseat="related_1" title="播放">
+                                                                            14.9万
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="" data-videolist-aid="333950700" data-vid="" data-qiyu-idx="0"
+                                                        data-qiyu-source="0">
+                                                            <div class="borCon clearfix">
+                                                                <div class="pic-left">
+                                                                    <a class="piclist_img" href="#"
+                                                                    title="红珊瑚" rseat="related-pic-1">
+                                                                        <img src="#"
+                                                                        alt="红珊瑚" rseat="related-img-1" width="116" height="65">
+                                                                        <p class="video_position video_rb">
+                                                                            <span class="v_name" rseat="related_tl">
+                                                                                01:50:53
+                                                                            </span>
+                                                                        </p>
+                                                                        <p class="video_on_border">
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="con-right">
+                                                                    <h3>
+                                                                        <a href="#" title="红珊瑚"
+                                                                        rseat="related-title-1">
+                                                                            红珊瑚
+                                                                        </a>
+                                                                    </h3>
+                                                                    <p rseat="playcount">
+                                                                        <i class="site-icons icon-playB">
+                                                                        </i>
+                                                                        <span data-pc-albumid="333950700" rseat="related_1" title="播放">
+                                                                            14.9万
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="" data-videolist-aid="333950700" data-vid="" data-qiyu-idx="0"
+                                                        data-qiyu-source="0">
+                                                            <div class="borCon clearfix">
+                                                                <div class="pic-left">
+                                                                    <a class="piclist_img" href="#"
+                                                                    title="红珊瑚" rseat="related-pic-1">
+                                                                        <img src="#"
+                                                                        alt="红珊瑚" rseat="related-img-1" width="116" height="65">
+                                                                        <p class="video_position video_rb">
+                                                                            <span class="v_name" rseat="related_tl">
+                                                                                01:50:53
+                                                                            </span>
+                                                                        </p>
+                                                                        <p class="video_on_border">
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="con-right">
+                                                                    <h3>
+                                                                        <a href="#" title="红珊瑚"
+                                                                        rseat="related-title-1">
+                                                                            红珊瑚
+                                                                        </a>
+                                                                    </h3>
+                                                                    <p rseat="playcount">
+                                                                        <i class="site-icons icon-playB">
+                                                                        </i>
+                                                                        <span data-pc-albumid="333950700" rseat="related_1" title="播放">
+                                                                            14.9万
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="" data-videolist-aid="333950700" data-vid="" data-qiyu-idx="0"
+                                                        data-qiyu-source="0">
+                                                            <div class="borCon clearfix">
+                                                                <div class="pic-left">
+                                                                    <a class="piclist_img" href="#"
+                                                                    title="红珊瑚" rseat="related-pic-1">
+                                                                        <img src="#"
+                                                                        alt="红珊瑚" rseat="related-img-1" width="116" height="65">
+                                                                        <p class="video_position video_rb">
+                                                                            <span class="v_name" rseat="related_tl">
+                                                                                01:50:53
+                                                                            </span>
+                                                                        </p>
+                                                                        <p class="video_on_border">
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="con-right">
+                                                                    <h3>
+                                                                        <a href="#" title="红珊瑚"
+                                                                        rseat="related-title-1">
+                                                                            红珊瑚
+                                                                        </a>
+                                                                    </h3>
+                                                                    <p rseat="playcount">
+                                                                        <i class="site-icons icon-playB">
+                                                                        </i>
+                                                                        <span data-pc-albumid="333950700" rseat="related_1" title="播放">
+                                                                            14.9万
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+														<li class="" data-videolist-aid="333950700" data-vid="" data-qiyu-idx="0"
+                                                        data-qiyu-source="0">
+                                                            <div class="borCon clearfix">
+                                                                <div class="pic-left">
+                                                                    <a class="piclist_img" href="#"
+                                                                    title="红珊瑚" rseat="related-pic-1">
+                                                                        <img src="#"
+                                                                        alt="红珊瑚" rseat="related-img-1" width="116" height="65">
+                                                                        <p class="video_position video_rb">
+                                                                            <span class="v_name" rseat="related_tl">
+                                                                                01:50:53
+                                                                            </span>
+                                                                        </p>
+                                                                        <p class="video_on_border">
+                                                                        </p>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="con-right">
+                                                                    <h3>
+                                                                        <a href="#" title="红珊瑚"
+                                                                        rseat="related-title-1">
+                                                                            红珊瑚
+                                                                        </a>
+                                                                    </h3>
+                                                                    <p rseat="playcount">
+                                                                        <i class="site-icons icon-playB">
+                                                                        </i>
+                                                                        <span data-pc-albumid="333950700" rseat="related_1" title="播放">
+                                                                            14.9万
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--相关视频 end-->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1589,15 +1703,66 @@
                                         <!-- 弹幕开关1 -->
                                         <div class="danmu-close fl">
                                             <div class="clearfix">
-                                                <h3 class="fl danmuTit" style="magin-left:20px">
+                                                <h3 class="fl danmuTit">
                                                     弹幕
                                                 </h3>
                                                 <!-- switch fl 关闭 -->
-                                                <a class="switch" style="margin-left:30px" href="javascript:void(0);" >
+                                                <a class="switch  fl switch_open" data-barrage-status="show" rseat="140743_opn"
+                                                href="javascript:void(0);" data-pb="qpid=431779800">
                                                 </a>
                                             </div>
                                         </div>
                                         <!-- 弹幕开关 end-->
+                                        <!-- 弹幕主内容区 123 -->
+                                        <div class="danmu-main fl">
+                                            <div data-barrage-panel="config" class="tucao-static pr">
+                                                <!-- 开关引导 -->
+                                                <div class="guide-switch" style="display:none;" data-barrage-btntip="wrap">
+                                                    <p class="p-tip1">
+                                                    </p>
+                                                    <p class="p-tip2">
+                                                    </p>
+                                                </div>
+                                                <!-- 开关引导 end-->
+                                                <!-- 关闭引导 class替换为guide-switch-close -->
+                                            </div>
+                                            <span data-barrage-wrap="input" class="conduct-bar pr conduct-bar-v2 tucao-input-default">
+                                                <span class="inputAdd-smile">
+                                                    <input type="text" class="fl tucao-input " placeholder="发送弹幕一起high！" data-barrage-input="barrage"
+                                                    rseat="608241_input">
+                                                    <!-- 输入引导 -->
+                                                    <span style="displayblack;" data-barrage-guide="tip">
+                                                    </span>
+                                                    <!-- 输入引导 end-->
+                                                </span>
+                                                <span class="dmNew_limit dn" data-barrage-limit="barrage">
+                                                    26/25
+                                                </span>
+                                                <div class="danmuLogin dn" id="danmuLogin">
+                                                    <p class="danmuLogin-info dn" id="danmuLoginInfo">
+                                                        <a href="javascript:void(0)" j-delegate="login" class="green">
+                                                            登录
+                                                        </a>
+                                                        或
+                                                        <a href="javascript:void(0)" j-delegate="regist" class="green">
+                                                            注册
+                                                        </a>
+                                                        后来一发吧！
+                                                    </p>
+                                                </div>
+                                            </span>
+                                            <!-- fl send_btnAct class发送 -->
+                                            <a data-pb="qpid=431779800" href="javascript:void(0);" class="fl send_btnAct"
+                                            data-barrage-send="barrage" style="display: block;">
+                                                发送
+                                            </a>
+                                            <a href="javascript:void(0);" class="fl countdown_btn dn" data-barrage-countdown="barrage">
+                                                5s
+                                            </a>
+                                            <div class="defShiel_popBox dn" data-barrage-module="custom">
+                                            </div>
+                                        </div>
+                                        <!-- 弹幕主内容区 end-->
                                     </qchunk>
                                 </div>
                             </div>
@@ -2704,7 +2869,7 @@
                                                                         <textarea class="form-textarea-comment grayDark" placeholder="我来说两句..."
                                                                         data-feedcontent-elem="feedcontent">
                                                                         </textarea>
-                                                                        <div class="feed-submit-success" data-elem-tip="succ" style="display:none;">
+                                                                        <div class="feed-submit-success" data-elem-tip="succ" style="displayblack;">
                                                                             <i class="csIcon csIcon-feed-submit-success">
                                                                             </i>
                                                                             <em class="desc">

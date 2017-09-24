@@ -80,7 +80,7 @@
 		JcScpAEndH = "300"
 		JcScpAEndLink= "/"
 
-		ShowJcScpAMoveText = "yes"
+		ShowJcScpAMoveText = "no"
 		
 	 />
 
