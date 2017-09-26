@@ -931,7 +931,7 @@
                                             so.addParam("quality", "high");
                                             so.addParam("salign", "lt");
                                             //播放器配置文件-----------------------------
-                                            so.addVariable("JcScpFile", "/video/CuSunV4set.xml"); //配置文件地址
+                                            so.addVariable("JcScpFile", "/video/CuSunV4set.php"); //配置文件地址
                                             //-开播前广告参数-----------------------------
                                             so.addVariable("ShowJcScpAFront", "yes");
                                             so.addVariable("JcScpCountDowns", "7");
