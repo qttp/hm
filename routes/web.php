@@ -14,28 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hm',function(){
-    return view('/v/play');
+Route::get('/test/{num}',function($num){
+	session(['adminLoginFlag' => $num]);
 });
+Route::get('/admin/login','Admin\LoginController@login');
+Route::get('/admin/verify','Admin\LoginController@verify');
+Route::post('/admin/dologin','Admin\LoginController@dologin');
 
-Route::get('/vi',function(){
-    return view('/v/vi');
-});
-Route::get('/index',function(){
-    return view('/v/index');
-});
-Route::get('/info',function(){
-    return view('v/info');
-});
-Route::get('/list',function(){
-    return view('v/list');
-});
-Route::get('/vipinfo',function(){
-    return view('v/vipInfo');
-});
-Route::get('/search',function(){
-    return view('v/search');
-});
-Route::get('/question',function(){
-    return view('v/question');
+Route::group(['middleware' => 'adminLogin','prefix'=>'admin','namespace'=>'Admin'],function(){
+    Route::get('/index','LoginController@index');
+    Route::get('/logout','LoginController@logout');
+	Route::resource('/user','UserController');
+	Route::get('check','UserController@check');
+	Route::get('dverify','UserController@verify');
 });
