@@ -204,6 +204,221 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 前台用户管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 用户添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 用户列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 分类管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/cate/create">
+                                <span class="sidebar-nav-link-logo"></span> + 分类添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/cate">
+                                <span class="sidebar-nav-link-logo"></span> ~ 分类列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 视频管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 视频添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 视频列表
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 视频评论管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 视频评论列表
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 视频广告管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 视频广告添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 视频广告列表
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 轮播图管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 轮播图片添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 轮播图片列表
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 网站公告管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 公告发布
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 公告列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 广告位管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 广告发布
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 广告列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 用户反馈管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 反馈列表列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 友情链接管理
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user/create">
+                                <span class="sidebar-nav-link-logo"></span> + 友情链接添加
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/user">
+                                <span class="sidebar-nav-link-logo"></span> ~ 友情链接列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 网站系统配置
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/system/create">
+                                <span class="sidebar-nav-link-logo"></span> ~ 网站配置添加
+                            </a>
+                        </li>
+                        <li class="sidebar-nav-link">
+                            <a href="/admin/system">
+                                <span class="sidebar-nav-link-logo"></span> ~ 网站配置列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
 @section('content')

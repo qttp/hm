@@ -21,7 +21,7 @@
 						</div>
 						<div class="widget-body am-fr">
 							<form id="user_form" class="am-form tpl-form-border-form tpl-form-border-br"
-							method="post" action="/admin/user/{{$user -> uid}}" enctype="multipart/form-data">
+							method="post" action="/admin/user/{{$user -> user_id}}" enctype="multipart/form-data">
 								<div class="am-form-group">
 									<label class="am-u-sm-3 am-form-label">
 										管理员级别
@@ -48,7 +48,7 @@
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="{{$user -> uname}}" id="nick_name" name="nick_name" placeholder="请输入管理员昵称"
+										<input class="tpl-form-input" value="{{$user -> user_name}}" id="nick_name" name="nick_name" placeholder="请输入管理员昵称"
 										type="text">
 										<small>
 											请填写昵称2~8位左右

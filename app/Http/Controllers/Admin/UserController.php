@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         //查询所有的用户并且显示
         $keywords = $request -> input('keywords') ?? '';
-        $type = $request -> input('type') ?? 'uname';
+        $type = $request -> input('type') ?? 'user_name';
         $users = User::where($type,'like',"%{$keywords}%") -> paginate(2);
         $auth = ['普通管理员','超级管理员'];
         $sex = ['女','男'];
@@ -120,7 +120,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //删除管理员用户
+        if (User::where('user_id',$id)->delete()) {
+            echo 1;
+        } else {
+            echo 0;
+        }
     }
     /**
      *功能:判断置指定数据是否存在于数据库中

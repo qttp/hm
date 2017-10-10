@@ -35,14 +35,14 @@
 
                     <form method="post" action="/admin/dologin" class="am-form tpl-form-line-form">
                         <div class="am-form-group">
-                            <input type="text" class="tpl-form-input" name="uname" id="uname" value="{{old('uname')}}" placeholder="请输入管理员账号/手机号/昵称/邮箱">
+                            <input type="text" class="tpl-form-input" name="user_name" id="user_name" value="{{old('uname')}}" placeholder="请输入管理员账号/手机号/昵称/邮箱">
                         </div>
                         <div class="am-form-group">
                             <input type="password" class="tpl-form-input" name="upwd" id="upwd" placeholder="请输入管理员密码">
                         </div>
                         <div class="am-form-group">
                             <input type="text" style="width:45%;display:inline-block;margin-right:20px" name="check" id="check" placeholder="请输入验证码">
-                            <img src="{{ url('/admin/verify')}}" title="看不清,换一张" onclick="this.src='{{ url('/admin/check') }}?'+Math.random()" />
+                            <img src="{{ url('/admin/verify')}}" title="看不清,换一张" onclick="this.src='{{ url('/admin/verify') }}?'+Math.random()" />
                         </div>
                         <div class="am-form-group tpl-login-remember-me">
                             <input id="remember-me" name="mark" value="1" type="checkbox">

@@ -28,8 +28,8 @@ class LoginController extends Controller
             return redirect('/admin/login') -> with('errors','verify') -> withInput();
         }
         
-        $uname = $request -> input('uname');
-        $user = DB::table('admin_user') -> orWhere('uname',$uname) -> orWhere('email',$uname) -> orWhere('nick_name',$uname) -> orWhere('tel',$uname) ->  first();
+        $uname = $request -> input('user_name');
+        $user = DB::table('admin_user') -> orWhere('user_name',$uname) -> orWhere('email',$uname) -> orWhere('nick_name',$uname) -> orWhere('tel',$uname) ->  first();
         if(! $user){
             return redirect('/admin/login') -> with('errors','user or password error');
         }
@@ -58,7 +58,7 @@ class LoginController extends Controller
     public function logout(request $request)
     {
         //向数据库更新数据
-        DB::table('admin_user') -> where('uid',session('adminInfo')->uid) -> update(['last_login'=>time(),'login_ip'=>$request->ip()]);
+        DB::table('admin_user') -> where('user_id',session('adminInfo')->user_id) -> update(['last_login'=>time(),'login_ip'=>$request->ip()]);
         $request -> session() -> forget('adminLoginFlag','adminInfo');
         Cookie::queue(session_name(),'');
         return redirect('/admin/login');

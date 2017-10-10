@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
 	protected $table = 'admin_user';
-	protected $primaryKey = 'uid';
+	protected $primaryKey = 'user_id';
 	protected $guarded =[];
 	public $timestamps = false;
 
 	public function checkType($type)
 	{
 		switch($type){
-            case 'uname':
-                $where = 'uname';
+            case 'user_name':
+                $where = 'user_name';
                 break;
             case 'email':
                 $where = 'email';
@@ -39,11 +39,6 @@ class User extends Model
 		if (preg_match($reg,$data)) {
 			
 		}
-		// $data['nick_name'];		/^\S{2,8}$/
-		// $data['sex'];
-		// $data['tel'];			/^1[345678]\d{9}$/
-		// $data['email'];			/^\w+@\w+(\.cn|\.com|\.net){1,2}$/
-		// $data['auth'];
 
 	}
 }

@@ -19,7 +19,7 @@
 											<option value="nick_name">
 												管理员昵称
 											</option>
-											<option value="uname">
+											<option value="user_name">
 												管理员账号
 											</option>
 											<option value="email">
@@ -27,9 +27,6 @@
 											</option>
 											<option value="tel">
 												联系方式
-											</option>
-											<option value="uname">
-												管理员账号
 											</option>
 										</select>
 									</div>
@@ -82,10 +79,10 @@
 										@foreach($users as $user)
 										<tr class="gradeX">
 											<td>
-												{{ $user -> uid }}
+												{{ $user -> user_id }}
 											</td>
 											<td>
-												{{ $user -> uname }}
+												{{ $user -> user_name }}
 											</td>
 											<td>
 												{{ $user -> nick_name }}
@@ -116,12 +113,12 @@
 														</i>
 														发消息
 													</a>
-													<a href="{{ url('/admin/user/' . $user -> uid . '/edit') }}">
+													<a href="{{ url('/admin/user/' . $user -> user_id . '/edit') }}">
 														<i class="am-icon-pencil">
 														</i>
 														编辑
 													</a>
-													<a href="javascript:;" onclick="del({{ $user -> uid }})" class="tpl-table-black-operation-del">
+													<a href="javascript:;" onclick="del({{ $user -> user_id }})" class="tpl-table-black-operation-del">
 														<i class="am-icon-trash">
 														</i>
 														删除
@@ -195,7 +192,6 @@
 			background:red;
 		}
 	</style>
-	<div id="win">聊天窗口</div>
 	<script>
 		var ele = null;
 		var oldText = '';
@@ -231,7 +227,7 @@
 			}
 			var attr = _this.attr('id');
 			switch (attr) {
-				case 'uname':
+				case 'user_name':
 					ele = varify(/^[a-zA-z]\w{5,18}$/,$(this).val());
 					
 				break;
@@ -265,7 +261,7 @@
 		}
 		var trs = $('table tr');
 		trs.each(function(){
-		    $(this).find('td').eq(1).dblclick(edit).attr('id','uname');
+		    $(this).find('td').eq(1).dblclick(edit).attr('id','user_name');
 			$(this).find('td').eq(2).dblclick(edit).attr('id','nick_name');
 			$(this).find('td').eq(4).dblclick(edit).attr('id','email');
 			$(this).find('td').eq(5).dblclick(edit).attr('id','tel');
@@ -277,11 +273,18 @@
 			layer.confirm('您确定需要删除此数据？', {
 				btn: ['确定','取消']
 			}, function(){
-				$.post('{{url("/admin/user/")}}'+$id,{
+				$.post('{{url("/admin/user")}}/'+id,{
 					'_method':'delete',
-					'_token':{{ csrf_token() }}
+					'_token':"{{ csrf_token() }}"
 				},function(data){
-					layer.msg('OK', {icon: 6,time:1500});
+					if(data == 1){
+						layer.msg('OK', {icon: 6,time:1500});
+						location.href = location.href;
+					} else {
+						layer.msg('删除失败', {icon: 5,time:1500});
+						location.href = location.href;
+					}
+					
 				});
 			});
 		}

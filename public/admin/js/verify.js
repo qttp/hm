@@ -4,7 +4,7 @@ var infos = [];
         ele.next().text(info).css('color','red');
     }
     //检测用户账号是否符合规则
-    $('#uname').blur(function(){
+    $('#user_name').blur(function(){
         var text = $(this).val();
         if (! text) {
             err($(this),'用户账号不能为空,请重新输入');
@@ -20,7 +20,7 @@ var infos = [];
         var _this = $(this);
         //发送ajax判断用户账号是否已经注册
         $.get('/admin/check',{
-            'type':'uname',
+            'type':'user_name',
             'val':text
         },function(data){
             if(data != 0){

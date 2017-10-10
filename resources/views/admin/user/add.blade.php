@@ -43,14 +43,14 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label for="uname" class="am-u-sm-3 am-form-label">
+                                <label for="user_name" class="am-u-sm-3 am-form-label">
                                     管理员账号
                                     <span class="tpl-form-line-small-title">
                                         Number
                                     </span>
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input class="tpl-form-input" id="uname" name="uname" placeholder="请输入管理员账号" type="text">
+                                    <input class="tpl-form-input" id="user_name" name="user_name" placeholder="请输入管理员账号" type="text">
                                     <small>
                                         请填写账号6~18位左右,(字母'开头',数字,下划线)
                                     </small>
