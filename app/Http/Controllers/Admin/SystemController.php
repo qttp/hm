@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Model\System;
+use Illuminate\Support\Facades\DB;
 
 class SystemController extends Controller
 {
@@ -17,6 +18,17 @@ class SystemController extends Controller
     {
         //
         $configs = System::get();
+        foreach($configs as $key => $config){
+            switch(){
+                case 'input':
+                    $config[$key]['config'] = '<input class="tpl-form-input" name="system_content[]" type="text" />';
+                break;
+                case 'textarea':
+                break;
+                case 'radio':
+                break;
+            }
+        }
         return view('admin.system.lists',compact('configs'));
     }
 
@@ -38,17 +50,12 @@ class SystemController extends Controller
      */
     public function store(Request $request)
     {
-        foreach($request -> all() as $v){
-            if (! $v) {
+        //dd($request -> all());
+        $data = $request -> except('_token');
+        foreach($data as $v){
+            if ($v == null) {
                 return back();
             }
-        }
-        if ($request -> input('mark')) {
-            $data = $request -> except(['_token','mark']);
-            $data['system_value'] = 1;
-        } else {
-            $data = $request -> except('_token');
-            $data['system_value'] = 0;
         }
         if (System::insert($data)) {
             return redirect('admin/system');
@@ -119,5 +126,11 @@ class SystemController extends Controller
         } else {
             return 0;
         }
+    }
+    public function putFile()
+    {
+        $systemInfo = System::select('system_content','system_name') -> get();
+        //将数据写入文件
+        file_put_contents(base_path().'/config/systemInfo.php',$systemInfo);
     }
 }

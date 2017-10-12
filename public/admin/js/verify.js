@@ -190,6 +190,7 @@ var infos = [];
                 return false;
             }
         }
+		/*
         //检查错误信息
         layer.msg('确定添加此管理员？', {
             btn: ['确定','取消'] //按钮
@@ -218,4 +219,5 @@ var infos = [];
             });
         });
         return false;
+		*/
     });

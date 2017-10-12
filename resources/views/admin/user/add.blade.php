@@ -50,7 +50,7 @@
                                     </span>
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input class="tpl-form-input" id="user_name" name="user_name" placeholder="请输入管理员账号" type="text">
+                                    <input class="tpl-form-input" id="user_name" name="user_name" value="{{ old('user_name') }}" placeholder="请输入管理员账号" type="text">
                                     <small>
                                         请填写账号6~18位左右,(字母'开头',数字,下划线)
                                     </small>
@@ -64,7 +64,7 @@
                                     </span>
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input class="tpl-form-input" id="nick_name" name="nick_name" placeholder="请输入管理员昵称" type="text">
+                                    <input class="tpl-form-input" id="nick_name" name="nick_name" value="{{ old('nick_name') }}" placeholder="请输入管理员昵称" type="text">
                                     <small>
                                         请填写昵称2~8位左右
                                     </small>
@@ -109,7 +109,7 @@
                                     <label for="man">男</label>
                                     <input class="tpl-form-input" id="man" name="sex" value="1" checked type="radio">
                                     <label for="man">女</label>
-                                    <input class="tpl-form-input" id="man" name="sex" value="0" chected type="radio">
+                                    <input class="tpl-form-input" id="man" name="sex" value="0" type="radio">
                                 </div>
                             </div>
 							<div class="am-form-group">
@@ -120,7 +120,7 @@
                                     </span>
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input class="tpl-form-input" id="tel" name="tel" placeholder="请输入常用手机号" type="text">
+                                    <input class="tpl-form-input" id="tel" name="tel" value="{{ old('tel') }}" placeholder="请输入常用手机号" type="text">
                                     <small>
                                         请输入常用手机号
                                     </small>
@@ -134,26 +134,26 @@
                                     </span>
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input class="tpl-form-input" id="email" name="email" placeholder="请输入常用邮箱" type="text">
+                                    <input class="tpl-form-input" id="email" name="email" value="{{ old('email') }}" placeholder="请输入常用邮箱" type="text">
                                     <small>
                                         请输入常用邮箱
                                     </small>
                                 </div>
                             </div>
 							<div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">管理员头像 <span class="tpl-form-line-small-title">Face</span></label>
-                                        <div class="am-u-sm-9">
-                                            <div class="am-form-group am-form-file">
-                                                <div class="tpl-form-file-img">
-                                                    <img src="#" alt="">
-                                                </div>
-                                                <button type="button" class="am-btn am-btn-danger am-btn-sm">
-    <i class="am-icon-cloud-upload"></i> 添加头像</button>
-                                                <input id="doc-form-file" multiple="" type="file">
-                                            </div>
-
+                                <label class="am-u-sm-3 am-form-label">管理员头像 <span class="tpl-form-line-small-title">Face</span></label>
+                                <div class="am-u-sm-9">
+                                    <div class="am-form-group am-form-file">
+                                        <div class="tpl-user-panel-profile-picture">
+                                            <img src="#" id="user_img" alt="" />
                                         </div>
+                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+    <i class="am-icon-cloud-upload"></i> 添加头像</button>
+										<input id="face" type="hidden" name="face" />
+                                        <input id="user_face" multiple="true" name="upload" type="file">
                                     </div>
+								</div>
+                            </div>
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3">
                                     {{ csrf_field() }}
@@ -167,4 +167,38 @@
         </div>
     </div>
 <script type="text/javascript" src="/admin/js/verify.js"></script>
+<script type="text/javascript">
+    $('#user_face').change(function(){
+		//判断文件是否为空
+		var imgPath = $('#user_face').val();
+		if (imgPath == '') {
+			layer.msg('请选择上传的文件',{time:1500});
+			return false;
+		}
+		//检查后缀名
+		var strExtension = imgPath.substr(imgPath.lastIndexOf('.') + 1);
+            if (strExtension != 'jpg' && strExtension != 'gif'
+                && strExtension != 'png' && strExtension != 'gpeg') {
+                alert("请选择图片文件");
+                return false;
+            }
+		//上传文件
+		var formData = new FormData($('#user_form')[0]);
+		$.ajax({
+			type: "POST",
+			url: "{{ url('admin/user/upload') }}",
+			data: formData,
+			contentType: false,
+			processData: false,
+			success: function(data){
+				$('#user_img').attr('src','/'+data);
+				$('#face').val(data);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				layer.msg('请检查网络信息',{time:1500});
+			}
+		});
+		
+	});
+</script>
 @endsection

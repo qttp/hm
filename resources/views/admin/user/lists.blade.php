@@ -88,7 +88,9 @@
 												{{ $user -> nick_name }}
 											</td>
 											<td>
-												<img src="{{ $user -> face }}" alt="{{ $user -> face }}" />
+												<div class="tpl-user-panel-profile-picture">
+													<img src="/{{ $user -> face }}" alt="{{ $user -> face }}" />
+												</div>
 											</td>
 											<td>
 												{{ $user -> email }}
@@ -118,6 +120,15 @@
 														</i>
 														编辑
 													</a>
+													@if($user -> auth)
+													<a class="tpl-table-black-operation-del" onclick="auth({{ $user -> user_id }},0)" href="javascript:;">
+														- 降权
+													</a>
+													@else
+													<a class="tpl-table-black-operation-del" onclick="auth({{ $user -> user_id }},1)" href="javascript:;">
+														+ 提权
+													</a>
+													@endif
 													<a href="javascript:;" onclick="del({{ $user -> user_id }})" class="tpl-table-black-operation-del">
 														<i class="am-icon-trash">
 														</i>
@@ -286,6 +297,18 @@
 					}
 					
 				});
+			});
+		}
+		function auth(id,status)
+		{
+			$.post('/admin/user/auth',{id:id,auth:status,'_token':"{{ csrf_token() }}"},function(data){
+				if (data == 0) {
+				    layer.msg('修改权限失败', {icon: 5,time:1000});
+					location.href = location.href;
+				} else {
+					layer.msg('修改权限成功', {icon: 6,time:1000});
+					location.href = location.href;
+				}
 			});
 		}
 	</script>

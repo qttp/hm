@@ -32,6 +32,10 @@ class CategoryController extends Controller
     {
         //取数据
         $cates = Cate::get();
+        $cates = $this -> getLeval($cates);
+        foreach($cates as $cate){
+            $cate -> name = str_repeat('&nbsp',4 * $cate -> leval) . $cate -> cate_name;
+        }
         //显示添加模板
         return view('admin.cate.add',compact('cates'));
     }
@@ -89,6 +93,12 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $data = $request -> only('cate_name');
+        if (Cate::where('cate_id',$id) -> update($data)) {
+            return redirect('admin/cate');
+        } else {
+            return back();
+        }
     }
 
     /**

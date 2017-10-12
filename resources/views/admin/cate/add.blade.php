@@ -35,9 +35,11 @@
 												顶级分类
 											</option>
 											@foreach($cates as $cate)
-											<option value="{{$cate -> cate_id}}">
-												{{$cate -> cate_name}}
-											</option>
+												@if($cate -> leval < 2)
+												<option value="{{$cate -> cate_id}}">
+													{!! $cate -> name !!}
+												</option>
+												@endif
 											@endforeach
 										</select>
 									</div>

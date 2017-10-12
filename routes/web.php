@@ -11,19 +11,20 @@
 |
 */
 
+Route::get('test','Admin\SystemController@putFile');
 Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/test/{num}',function($num){
-	session(['adminLoginFlag' => $num]);
 });
 Route::get('/admin/login','Admin\LoginController@login');
 Route::get('/admin/verify','Admin\LoginController@verify');
 Route::post('/admin/dologin','Admin\LoginController@dologin');
 Route::get('/admin/system/check','Admin\SystemController@check');
-Route::get('/admin/cate/check','Admin\Category	Controller@check');
+Route::get('/admin/cate/check','Admin\CategoryController@check');
 Route::get('/admin/cate/addChild/{pid}','Admin\CategoryController@addChild');
 Route::post('/admin/cate/doAddChild','Admin\CategoryController@doaddChild');
+Route::get('/admin/video/getfields','Admin\VideoController@getChields');
+Route::post('admin/user/upload','Admin\UserController@upLoad');
+Route::post('admin/video/upload','Admin\VideoController@upLoad');
 
 Route::group(['middleware' => 'adminLogin','prefix'=>'admin','namespace'=>'Admin'],function(){
     Route::get('/index','LoginController@index');
@@ -33,4 +34,7 @@ Route::group(['middleware' => 'adminLogin','prefix'=>'admin','namespace'=>'Admin
 	Route::get('dverify','UserController@verify');
 	Route::resource('system','SystemController');
 	Route::resource('cate','CategoryController');
+	Route::resource('video','VideoController');
+	Route::get('/user/{id}/editInfo','UserController@editInfo');
+	Route::post('/user/auth','UserController@auth');
 });

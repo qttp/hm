@@ -1,5 +1,5 @@
 @extends('admin.temp.temp')
-@section('title','修改网站配置')
+@section('title','网站配置')
 @section('content')
 	<style>
     .theme-black .tpl-form-border-form input[type="text"],.theme-black .tpl-form-border-form input[type="password"]{width:50%;display:inline-block;margin-right:5px;}
@@ -12,7 +12,7 @@
 					<div class="widget am-cf">
 						<div class="widget-head am-cf">
 							<div class="widget-title am-fl">
-								网站配置修改
+								网站配置
 							</div>
 							<div class="widget-function am-fr">
 								<a href="javascript:;" class="am-icon-cog">
@@ -49,21 +49,6 @@
 										type="text">
 										<small>
 											配置项字段名称，必须填写
-										</small>
-									</div>
-								</div>
-								<div class="am-form-group">
-									<label for="nick_name" class="am-u-sm-3 am-form-label">
-										变量值
-										<span class="tpl-form-line-small-title">
-											Variabale Name
-										</span>
-									</label>
-									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="" id="system_value" name="system_value" placeholder="请输入变量值"
-										type="text">
-										<small>
-											变量的值
 										</small>
 									</div>
 								</div>
@@ -110,7 +95,9 @@
 										<input class="tpl-form-input" value="text" id="text" name="system_type" onclick="show()" type="radio">
 										<label for="text">Text</label>
 										<input class="tpl-form-input" value="radio" id="radio" name="system_type" onclick="show()" type="radio">
-										<label for="radio">textarea</label>
+										<label for="radio">radio</label>
+										<input class="tpl-form-input" value="textarea" id="textarea" name="system_type" onclick="show()" type="radio">
+										<label for="textarea">textarea</label>
 									</div>
 								</div>
 								<div class="am-form-group" style="display:none" id="open_close">
@@ -118,9 +105,9 @@
 										Radio作用
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" checked value="1" id="start" name="mark" onclick="show()" type="radio">
+										<input class="tpl-form-input" checked value="1" id="start" name="system_value" onclick="show()" type="radio">
 										<label for="start">开启</label>
-										<input class="tpl-form-input" value="0" id="stop" name="mark" onclick="show()" type="radio">
+										<input class="tpl-form-input" value="0" id="stop" name="system_value" onclick="show()" type="radio">
 										<label for="stop">关闭</label>
 										<small style="margin-left:50px;">
 											只有radio类型的时候才能配置;0关闭/1启用

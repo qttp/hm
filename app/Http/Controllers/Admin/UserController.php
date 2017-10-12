@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Model\User;
+use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
 {
@@ -47,16 +48,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request -> except(['_token','reupwd']);
+        $data = $request -> except(['_token','reupwd','upload']);
         //插入数据
         $data['reg_time'] = time();
         $data['upwd'] = Hash::make($data['upwd']);
-        $data['face'] = 'default.jpg';
+        if ($data['face'] == null) {
+            $data['face'] = 'uploads/adminUsers/default.png';
+        }
         $res = User::insert($data);
         if ($res) {
-           echo 1;
+           return redirect('admin/user');
         } else {
-           echo 0;
+           return back() -> withInput();
         }
     }
 
@@ -93,8 +96,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         $data = $request -> all();
+        dd($data);
         $obj = new User();
         if (! $obj -> verify('/^\S{2,8}$/',$data['nick_name'])) {
             $err = '设置昵称不符合规范';
@@ -163,5 +166,30 @@ class UserController extends Controller
             }
         }
         echo 0;
+    }
+    public function editInfo($id)
+    {
+        $user = User::where('user_id',$id)->first();
+        return view('admin.user.editInfo',compact('user'));
+    }
+    public function upLoad(request $request)
+    {
+        $file = Input::file('upload');
+        if ($file -> isValid()) {
+            $extension = $file->getClientOriginalExtension();
+            $newName = date('YmdHis') . mt_rand(1000, 9999) . '.' . $extension;
+            //移动保存文件
+            $path = $file->move(public_path().'/uploads/adminUsers',$newName);
+            return $filepath = 'uploads/adminUsers/' . $newName;
+        }
+    }
+    public function auth(request $request)
+    {
+        $info = $request -> only('auth','id');
+        if (User::where('user_id',$info['id']) -> update(['auth' => $info['auth']])) {
+            echo 1;
+        } else {
+            echo 0;
+        }
     }
 }
