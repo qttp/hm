@@ -1,138 +1,222 @@
 @extends('admin.temp.temp')
-@section('title','视频分类列表')
+@section('title','视频分类添加')
 @section('content')
-	<div class="tpl-content-wrapper">
-		<div class="row-content am-cf">
-			<div class="row">
-				<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-					<div class="widget am-cf">
-						<div class="widget-head am-cf">
-							<div class="widget-title  am-cf">
-								视频分类列表
+<div class="tpl-content-wrapper">
+    <div class="row-content am-cf">
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title  am-cf">
+                            视频列表
+                        </div>
+                    </div>
+                    <div class="widget-body  am-fr">
+						<form id="search" method="get" action="/admin/video">
+							<div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
+								<div class="am-form-group tpl-table-list-select">
+									<select name="type" data-am-selected="{btnSize: 'sm'}" style="display: none;">
+										<option @if($data['type'] == 'cate_name') selected @endif value="cate_name">
+											视频类别
+										</option>
+										<option @if($data['type'] == 'video_name') selected @endif value="video_name">
+											视频名称
+										</option>
+										<option @if($data['type'] == 'director') selected @endif value="director">
+											视频导演
+										</option>
+										<option @if($data['type'] == 'actor') selected @endif value="actor">
+											视频演员
+										</option>
+									</select>
+								</div>
 							</div>
-						</div>
-						<div class="widget-body  am-fr">
-							<div class="am-u-sm-12">
-								<table class="am-table am-table-compact tpl-table-black "
-								id="example-r" width="100%">
-									<thead>
-										<tr>
-											<th>
-												ID
-											</th>
-											<th>
-												分类名称
-											</th>
-											<th>
-												父级ID
-											</th>
-											<th style="min-width:130px">
-												操作
-											</th>
-										</tr>
-									</thead>
-									<tbody>
-										@foreach($cates as $cate)
-										<tr class="gradeX" cate_id="{{$cate -> cate_id}}" pid="{{$cate -> pid}}" @if($cate -> pid == 0) style="background-color:#5A5F62" @endif>
-											<td>
-												{{ $cate -> cate_id }}
-											</td>
-											<td>
-												{!! $cate -> name !!}
-												@if($cate -> leval < 2 )<span class="am-icon-chevron-down" this_id="{{ $cate -> cate_id }}"></span> @endif
-											</td>
-											<td>
-												{{ $cate -> pid }}
-											</td>
-											<td>
-												<div class="tpl-table-black-operation">
-													@if($cate -> leval < 2)
-													<a href="{{ url('/admin/cate/addChild') . '/' . $cate -> cate_id }}">
-														<i class="am-icon-plus">
-														</i>
-														添加子类
-													</a>
-													@endif
-													<a href="{{ url('/admin/cate/' . $cate -> cate_id . '/edit') }}">
+							<div class="am-u-sm-12 am-u-md-12 am-u-lg-3" style="float:left">
+								<div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
+									<input class="am-form-field" name="keywords" value="{{ $data['keywords'] }}" placeholder="请输入查询条件" type="text">
+									<span class="am-input-group-btn">
+										<button id="btn" class="am-btn am-btn-default am-btn-success tpl-table-list-field am-icon-search"
+										type="submit">
+										</button>
+									</span>
+								</div>
+							</div>
+						</form>
+                        <div class="am-u-sm-12">
+                            <table class="am-table am-table-compact am-table-striped tpl-table-black "
+                            id="example-r" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            视频名称
+                                        </th>
+										<th>
+                                            视频封面
+                                        </th>
+										<th>
+                                            视频类别
+                                        </th>
+										<th>
+                                            总浏览量
+                                        </th>
+										<th>
+                                            添加时间
+                                        </th>
+                                        <th>
+                                            视频状态
+                                        </th>
+                                        <th>
+                                            操作
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+									@foreach($videos as $video)
+                                    <tr class="gradeX">
+                                        <td>
+                                            {{ $video -> video_id }}
+                                        </td>
+                                        <td>
+                                            {{ $video -> video_name }}
+                                        </td>
+                                        <td>
+											<div class="tpl-user-panel-profile-picture">
+												<img src="/{{ $video -> video_face }}" alt="{{ $video -> video_face }}" />
+											</div>
+                                        </td>
+										<td>
+                                            {{ $video -> cate_name }}
+                                        </td>
+										<td>
+                                            {{ $video -> read_count }}
+                                        </td>
+										<td>
+                                            {{ date('Y-m-d H:i:s',$video -> create_time) }}
+                                        </td>
+										<td>
+                                            {{ $status[ $video -> status ] }}
+                                        </td>
+                                        <td>
+                                            <div class="tpl-table-black-operation">
+                                                <a href="/admin/video/{{ $video -> video_id }}" >
+                                                    <i class="am-icon-pencil">
+                                                    </i>
+                                                    编辑
+                                                </a>
+												@if($video -> status == 1)
+												<a href="javascript:;" onclick="changeStatus({{ $video -> video_id }},'open')" style="color:white" class="am-btn am-btn-default am-btn-secondary" >
+                                                    <i class="am-icon-pencil">
+                                                    </i>
+													启用
+                                                </a>
+												<a href="javascript:;" onclick="changeStatus({{ $video -> video_id }},'close')" style="color:white" class="am-btn am-btn-default am-btn-danger">
+                                                    <i class="am-icon-pencil">
+                                                    </i>
+													禁用
+                                                </a>
+												@else
+                                                    @if($video -> status == 0)
+													<a href="javascript:;" onclick="changeStatus({{ $video -> video_id }},'open')" style="color:white" class="am-btn am-btn-default am-btn-secondary" >
 														<i class="am-icon-pencil">
 														</i>
-														编辑
+														启用
 													</a>
-													<a href="javascript:;" onclick="del({{ $cate -> cate_id }},this)" class="tpl-table-black-operation-del">
-														<i class="am-icon-trash">
+													@elseif($video -> status == 2)
+													<a href="javascript:;" onclick="changeStatus({{ $video -> video_id }},'close')" style="color:white" class="am-btn am-btn-default am-btn-danger">
+														<i class="am-icon-pencil">
 														</i>
-														删除
+														禁用
 													</a>
-												</div>
-											</td>
-										</tr>
-										@endforeach
-										<!-- more data -->
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		function del(id,_this)
-		{
-			var childs = $('tr[pid='+ id +']').length;
-			if(childs) {
-				layer.msg('不是最底层分类,不能删除',{time:1000});
-				return false;
-			}
-			layer.confirm('您确定需要删除此数据？', {
-				btn: ['确定','取消']
-			}, function(){
-					$.post('http://hm.com/admin/cate/' + id,{
-					'_method':'delete',
-					'_token':'{{ csrf_token() }}'
-				},function(data){
-					if (data != 0) {
-						location.href = location.href;
-						layer.msg('OK', {icon: 6,time:1500});
-					} else {
-						location.href = location.href;
-						layer.msg('删除失败', {icon: 5,time:1500});
-					}
-				});
-			});
-		}
-		
-		$('td span').click(function(){
-			if ($(this).attr('class') != 'am-icon-chevron-up') {
-				cut($(this).parents('tr').attr('cate_id'),$(this),'hide');
-				$(this).attr('class','am-icon-chevron-up');
+													@endif
+													
+												@endif
+                                                <a href="javascript:;" onclick="del('{{ $video -> video_id }}')" class="tpl-table-black-operation-del">
+                                                    <i class="am-icon-trash">
+                                                    </i>
+                                                    删除
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+									@endforeach
+                                    <!-- more data -->
+                                </tbody>
+                            </table>
+                        </div>
+						<style>
+							    .pagination::after {
+									clear: both;
+								}
+								.pagination::after, .am-pagination::before {
+									content: " ";
+									display: table;
+								}
+								.pagination {
+									position: relative;
+								}
+								.pagination {
+									padding-left: 0;
+									margin: 1.5rem 0;
+									list-style: none;
+									color: #999;
+									text-align: left;
+								}
+								.pagination li{
+									float:left;
+									
+									padding: 3px 10px;
+									margin-right: 10px;
+									background-color: #3F4649;
+								}
+								.pagination li a{
+									color:white;
+								}
+								.pagination .active {
+									color: #FFCE44;
+									border: 1px solid #167fa1;
+									background: #167fa1;
+									
+								}
+
+							</style>
+                        <div class="am-u-lg-12 am-cf">
+                            <div class="am-fr">
+                                {!! $videos -> appends($data) -> render() !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function changeStatus(id,status)
+	{
+		$.post("/admin/video/changeStatus",{'_token':"{{ csrf_token() }}",'id':id,'status':status},function(data){
+			if(data == 1) {
+				layer.msg('更改状态成功', {icon: 6,time:1000});
+				location.href = location.href;
 			} else {
-				
-				cut($(this).parents('tr').attr('cate_id'),$(this),'show');
-				$(this).attr('class','am-icon-chevron-down');
+				layer.msg('更改状态失败', {icon: 5,time:1000});
+				location.href = location.href;
 			}
 		});
-		function cut(id,_this,type)
-		{
-			if (type == 'hide') {
-				if ($("tr[pid=" + id + "]").length) {
-					$("tr[pid=" + id + "]").each(function(){
-						cut($(this).attr('cate_id'),$(this),'hide');
-						$(this).hide();
-					});
-				};
+	}
+	function del(id)
+	{
+		$.post('/admin/video/'+ id,{'_token':"{{ csrf_token() }}",'_method':'delete'},function(data){
+			if (data == 1) {
+				layer.msg('视频删除成功', {icon:6,time:1000});
+				location.href = location.href;
 			} else {
-				if($("tr[pid=1]").find('span').attr('class','am-icon-chevron-down')){
-				
-				}
-				if ($("tr[pid=" + id + "]").length ) {
-					$("tr[pid=" + id + "]").each(function(){
-						cut($(this).attr('cate_id'),$(this),'show');
-						$(this).show();
-					});
-				};
+				layer.msg('视频删除失败', {icon:5,time:1000});
+				location.href = location.href;
 			}
-		}
-	</script>
+		});
+	}
+</script>
 @endsection

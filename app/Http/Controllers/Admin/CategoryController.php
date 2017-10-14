@@ -31,11 +31,26 @@ class CategoryController extends Controller
     public function create()
     {
         //取数据
-        $cates = Cate::get();
-        $cates = $this -> getLeval($cates);
+        $cates = Cate::where('pid',0) -> get();
+		/*
+		foreach($cates as $cate){
+			//获取二级分类
+			if($cate -> pid == 0){
+				$lists[] = $cate;
+			}
+			foreach($cates as $v){
+				if($cate -> pid == 0  && $cate -> cate_id == $v -> pid){
+					$lists[] = $v;
+				}
+			}
+        }
+        $cates = $this -> getLeval($lists);
         foreach($cates as $cate){
             $cate -> name = str_repeat('&nbsp',4 * $cate -> leval) . $cate -> cate_name;
+				}
+			}
         }
+		*/
         //显示添加模板
         return view('admin.cate.add',compact('cates'));
     }
@@ -67,6 +82,9 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
+        $pid = $id;
+        $cate = Cate::find($id);
+        return view('admin.cate.addCate',compact('cate','pid'));
     }
 
     /**

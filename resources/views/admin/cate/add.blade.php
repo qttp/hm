@@ -30,14 +30,14 @@
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<select data-am-selected="{searchBox: 0}" name="pid" style="display: none;">
+										<select onchange="changeType()" data-am-selected="{searchBox: 0}" id="pid" name="pid" style="display: none;">
 											<option value="0">
 												顶级分类
 											</option>
 											@foreach($cates as $cate)
 												@if($cate -> leval < 2)
 												<option value="{{$cate -> cate_id}}">
-													{!! $cate -> name !!}
+													&nbsp;&nbsp;&nbsp;&nbsp;{!! $cate -> cate_name !!}
 												</option>
 												@endif
 											@endforeach
@@ -59,6 +59,33 @@
 										</small>
 									</div>
 								</div>
+								<div id="tag_field" class="am-form-group">
+									<label for="field_name" class="am-u-sm-3 am-form-label">
+										标签字段名
+										<span class="tpl-form-line-small-title">
+											Field Name
+										</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input class="tpl-form-input" value="" id="field_name" name="field_name" placeholder="标签字段名称"
+										type="text">
+										<small>
+											分类名称，必须填写
+										</small>
+									</div>
+								</div>
+								<div id="tag_type" class="am-form-group">
+									<label for="tag_type" class="am-u-sm-3 am-form-label">
+										标签类型
+										<span class="tpl-form-line-small-title">
+											Tag Type
+										</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input value="0" id="enum" checked  name="tag_type" type="radio" /><label for="enum">单选</label>
+										<input value="1" id="set" name="tag_type" type="radio" /><label for="set" >多选</label>
+									</div>
+								</div>
 								<div class="am-form-group">
 									<div class="am-u-sm-9 am-u-sm-push-3">
 										{{ csrf_field() }}
@@ -74,6 +101,21 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		function changeType()
+		{
+			if($('#pid').val() == 0){
+				$('#tag_type').find('input[type=radio]').attr('disabled',true);
+				$('#tag_type').hide();
+				$('#tag_field').find('input[type=text]').attr('disabled',true);
+				$('#tag_field').hide();
+			} else {
+				$('#tag_type').find('input[type=radio]').removeAttr('disabled');
+				$('#tag_type').show();
+				$('#tag_field').find('input[type=text]').removeAttr('disabled');
+				$('#tag_field').show();
+			}
+		}
+		changeType();
 		$('form').submit(function(){
 			if ($('#cate_name').val() == '') {
 				$('#cate_name').html('分类名称不可为空').css('color','red');

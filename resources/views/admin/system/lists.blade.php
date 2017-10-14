@@ -41,13 +41,13 @@
 												{{ $config -> system_id }}
 											</td>
 											<td>
+												{{ $config -> system_field }}
+											</td>
+											<td>
 												{{ $config -> system_title }}
 											</td>
 											<td>
-												{{ $config -> system_name }}
-											</td>
-											<td>
-												{{ $config -> system_content }}
+												{!! $config['system_config'] !!}
 											</td>
 											<td>
 												<div class="tpl-table-black-operation">
@@ -56,11 +56,13 @@
 														</i>
 														编辑
 													</a>
+													@if(session('adminInfo') -> auth)
 													<a href="javascript:;" onclick="del({{ $config -> system_id }})" class="tpl-table-black-operation-del">
 														<i class="am-icon-trash">
 														</i>
 														删除
 													</a>
+													@endif
 												</div>
 											</td>
 										</tr>
@@ -81,11 +83,17 @@
 			layer.confirm('您确定需要删除此数据？', {
 				btn: ['确定','取消']
 			}, function(){
-					$.post('http://hm.com/admin/user/' + id,{
+					$.post('http://hm.com/admin/system/' + id,{
 					'_method':'delete',
-					'_token':''
+					'_token':"{{ csrf_token() }}"
 				},function(data){
-					layer.msg('OK', {icon: 6,time:1500});
+					if (data == 1){
+						layer.msg('删除成功', {icon: 6,time:1500});
+						location.href = location.href;
+					} else {
+						layer.msg('删除失败', {icon: 5,time:1500});
+						location.href = location.href;
+					}
 				});
 			});
 		}

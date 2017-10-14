@@ -208,7 +208,7 @@
                         </li>
 
                         <li class="sidebar-nav-link">
-                            <a href="/admin/user">
+                            <a href="/admin/video">
                                 <span class="sidebar-nav-link-logo"></span> ~ 视频列表
                             </a>
                         </li>

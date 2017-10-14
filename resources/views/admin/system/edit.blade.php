@@ -24,16 +24,16 @@
 							method="post" action="/admin/system/{{$config -> system_id}}">
 								<div class="am-form-group">
 									<label for="nick_name" class="am-u-sm-3 am-form-label">
-										字段名称
+										标识名称
 										<span class="tpl-form-line-small-title">
 											Field Name
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="{{$config -> system_title}}" id="=system_name" name="system_name" placeholder="请输入管理员昵称"
+										<input class="tpl-form-input" value="{{$config -> system_title}}" id="=system_title" name="system_title" placeholder="请输入标识名称"
 										type="text">
 										<small>
-											请填写昵称2~8位左右
+											请填写标识名称
 										</small>
 									</div>
 								</div>
@@ -45,26 +45,33 @@
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="{{$config -> system_tips}}" id="system_tips" name="system_tips" placeholder="请输入管理员昵称"
+										<input class="tpl-form-input" value="{{$config -> system_desc}}" id="system_tips" name="system_desc" placeholder="请输入描述信息"
 										type="text">
 										<small>
-											请填写昵称2~8位左右
+											请填写说明描述
 										</small>
 									</div>
 								</div>
 								<div class="am-form-group">
 									<label for="nick_name" class="am-u-sm-3 am-form-label">
-										主要	内容
+										内容
 										<span class="tpl-form-line-small-title">
 											Description
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="{{$config -> system_content}}" id="system_content" name="system_content" placeholder="请输入管理员昵称"
+										@if( $config -> system_type != 'radio')
+										<input class="tpl-form-input" value="{{$config -> system_content}}" id="system_content" name="system_content" placeholder="请输入内容"
 										type="text">
 										<small>
-											请填写昵称2~8位左右
+											请填写内容
 										</small>
+										@else
+										<input value="1" id="open" @if($config -> system_content == 1) checked @endif name="system_content" type="radio" />
+										<label for="open">启用</label>
+										<input value="0" id="close" @if($config -> system_content == 0) checked @endif name="system_content" type="radio" />
+										<label for="close">关闭</label>
+										@endif
 									</div>
 								</div>
 								<div class="am-form-group">

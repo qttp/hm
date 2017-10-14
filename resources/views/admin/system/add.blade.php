@@ -45,7 +45,7 @@
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="" id="system_name" name="system_name" placeholder="请输入字段名称"
+										<input class="tpl-form-input" value="" id="system_field" name="system_field" placeholder="请输入字段名称"
 										type="text">
 										<small>
 											配置项字段名称，必须填写
@@ -68,14 +68,14 @@
 									</div>
 								</div>
 								<div class="am-form-group">
-									<label for="system_tips" class="am-u-sm-3 am-form-label">
+									<label for="system_desc" class="am-u-sm-3 am-form-label">
 										说明
 										<span class="tpl-form-line-small-title">
 											Description
 										</span>
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" value="" id="system_tips" name="system_tips" placeholder="请输入管理员昵称"
+										<input class="tpl-form-input" value="" id="system_desc" name="system_desc" placeholder="请输入管理员昵称"
 										type="text">
 										<small>
 											对字段的描述信息
@@ -92,12 +92,12 @@
 									<div class="am-u-sm-9">
 										<input class="tpl-form-input" checked value="input" id="input" name="system_type" onclick="show()" type="radio">
 										<label for="input">Input</label>
-										<input class="tpl-form-input" value="text" id="text" name="system_type" onclick="show()" type="radio">
-										<label for="text">Text</label>
 										<input class="tpl-form-input" value="radio" id="radio" name="system_type" onclick="show()" type="radio">
 										<label for="radio">radio</label>
 										<input class="tpl-form-input" value="textarea" id="textarea" name="system_type" onclick="show()" type="radio">
 										<label for="textarea">textarea</label>
+										<input class="tpl-form-input" value="img" id="pic" name="system_type" onclick="show()" type="radio">
+										<label for="pic">img</label>
 									</div>
 								</div>
 								<div class="am-form-group" style="display:none" id="open_close">
@@ -105,12 +105,25 @@
 										Radio作用
 									</label>
 									<div class="am-u-sm-9">
-										<input class="tpl-form-input" checked value="1" id="start" name="system_value" onclick="show()" type="radio">
+										<input class="tpl-form-input" value="1|启用,0|关闭" id="start" name="system_value" onclick="show()" type="text">
 										<label for="start">开启</label>
-										<input class="tpl-form-input" value="0" id="stop" name="system_value" onclick="show()" type="radio">
-										<label for="stop">关闭</label>
-										<small style="margin-left:50px;">
+										<small>
 											只有radio类型的时候才能配置;0关闭/1启用
+										</small>
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="field_name" class="am-u-sm-3 am-form-label">
+										字段内容
+										<span class="tpl-form-line-small-title">
+											Field Content
+										</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input class="tpl-form-input" id="system_content" name="system_content" placeholder="请输入字段内容"
+										type="text">
+										<small>
+											配置项字段内容，必须填写
 										</small>
 									</div>
 								</div>
@@ -134,8 +147,12 @@
 			var type = $('input[name=system_type]:checked').val();
 			if (type == 'radio') {
 				$('#open_close').show().find('input').removeAttr('disabled');
+				$('#system_content').parents('.am-form-group').hide();
+				$('#system_content').val('1');
 			} else {
 				$('#open_close').hide().find('input').attr('disabled',true);
+				$('#system_content').parents('.am-form-group').show();
+				$('#system_content').val('');
 			}
 		}
 		show();
@@ -145,9 +162,9 @@
 				return false;
 			}
 		});
-		$('#system_name').blur(function(){
+		$('#system_field').blur(function(){
 			var _this = $(this);
-			$.get('/admin/system/check',{system_name:_this.val()},function(data){
+			$.get('/admin/system/check',{system_field:_this.val()},function(data){
 				if (data == '1') {
 					_this.next().html('字段名已经存在,请重新设置').css('color','red');
 				} else {

@@ -46,8 +46,14 @@
 											</td>
 											<td>
 												<div class="tpl-table-black-operation">
-													@if($cate -> leval < 2)
+													@if($cate -> leval == 0)
 													<a href="{{ url('/admin/cate/addChild') . '/' . $cate -> cate_id }}">
+														<i class="am-icon-plus">
+														</i>
+														添加子类
+													</a>
+													@elseif($cate -> leval == 1)
+													<a href="{{ url('/admin/cate') . '/' . $cate -> cate_id }}">
 														<i class="am-icon-plus">
 														</i>
 														添加子类

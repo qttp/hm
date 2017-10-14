@@ -96,22 +96,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request -> all();
-        dd($data);
-        $obj = new User();
-        if (! $obj -> verify('/^\S{2,8}$/',$data['nick_name'])) {
-            $err = '设置昵称不符合规范';
+        $data = $request -> except('_token','upload');
+        if (User::where('user_id',$id)->update($data)) {
+            return redirect('/admin/user');
+        } else {
             return back() -> withInput();
         }
-        if ($obj -> verify('/^1[345678]\d{9}$/',$data['tel'])) {
-            $err = '设置手机号码不符合规范';
-            return back() -> withInput();
-        }
-        if ($obj -> verify('/^\w+@\w+(\.cn|\.com|\.net){1,2}$/',$data['email'])) {
-            $err = '设置邮箱不符合规范';
-            return back() -> withInput();
-        }
-        dd($request -> all());
 
     }
 

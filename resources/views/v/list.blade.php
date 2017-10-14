@@ -799,28 +799,6 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            (function() {
-                var a = Q.$("#widget-userregistlogin"),
-                b = a.down("[data-elem='topUserName']"),
-                d = a.down("[data-elem=topLoginPanel]"),
-                e = a.down("[data-elem=topRegistPanel]"),
-                f = a.down("*[data-elem=splitline]"),
-                c = Q.cookie.get("P00002") && JSON.parse(Q.cookie.get("P00002"));
-                if (c && c.pnickname) {
-                    c.nickname = c.pnickname;
-                }
-                var g = b.down("#top-username") || b.down("a");
-                c && c.nickname ? (d.hide(), e.hide(), f && f.hide(), !Q.browser.IE8 && Q.browser.IE6 && g.css("width", Math.min(12 * c.nickname.length, 36) + "px"), a.show(), b.show(), g.html(c.nickname)) : (b.hide(), d.html("登录").css("display", ""), e.html("注册").css("display", ""), a.show())
-            })();
-        </script>
-        <div class="site-main">
-            <!--列表页底部通栏广告-->
-            <div id="1000000000046" class="ad-wrapper clearfix">
-                <div class="divide-green-h">
-                </div>
-            </div>
-        </div>
         <!-- 导航结束 -->
         <div class="page-list  page-list-type1">
             <div class="wrapper-content clearfix mb20">
@@ -832,11 +810,13 @@
                                 频道：
                             </h3>
                             <ul class="mod_category_item">
+								@foreach($cates as $cate)
                                 <li>
-                                    <a href="/www/2/----------------iqiyi--.html">
-                                        电视剧
+                                    <a href="{{ url('/home/cate/'.$cate -> cate_id ) }}">
+                                        {{ $cate -> cate_name }}
                                     </a>
                                 </li>
+								@endforea
                                 <li class="selected">
                                     <a href="/www/1/----------------iqiyi--.html">
                                         电影

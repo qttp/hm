@@ -21,7 +21,7 @@
 						</div>
 						<div class="widget-body am-fr">
 							<form id="user_form" class="am-form tpl-form-border-form tpl-form-border-br"
-							method="post" action="/admin/user/{{$user -> user_id}}">
+							method="post" action="/admin/user/edit/{{$user -> user_id}}">
 								<div class="am-form-group">
 									<label class="am-u-sm-3 am-form-label">
 										管理员级别
@@ -105,7 +105,6 @@
 										</small>
 									</div>
 								</div>
-								<form id="form_face" method="post" action="/admin/user/upload" enctype="multipart/form-data">
 								<div class="am-form-group">
 									<label class="am-u-sm-3 am-form-label">管理员头像 <span class="tpl-form-line-small-title">Face</span></label>
 									<div class="am-u-sm-9">
@@ -115,16 +114,14 @@
 											</div>
 											<button type="button" class="am-btn am-btn-danger am-btn-sm">
 		<i class="am-icon-cloud-upload"></i> 修改头像</button>
-											{{ csrf_field() }}
 											<input id="face" type="hidden" name="face" />
 											<input id="user_face" multiple="true" name="upload" type="file">
 										</div>
 									</div>
 								</div>
-								</form>
 								<div class="am-form-group">
 									<div class="am-u-sm-9 am-u-sm-push-3">
-										{{ method_field('PUT') }}
+										{{ csrf_field() }}
 										<input class="am-btn am-btn-primary tpl-btn-bg-color-success " value="保存修改"
 										type="submit">
 									</div>
@@ -152,7 +149,8 @@
                 return false;
             }
 		//上传文件
-		var formData = new FormData($('#form_face')[0]);
+		var formData = new FormData($('#user_form')[0]);
+		console.log(formData);
 		$.ajax({
 			type: "POST",
 			url: "/admin/user/upload",

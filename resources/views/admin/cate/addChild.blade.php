@@ -38,6 +38,33 @@
 									</div>
 								</div>
 								<div class="am-form-group">
+									<label for="field_name" class="am-u-sm-3 am-form-label">
+										标签字段名
+										<span class="tpl-form-line-small-title">
+											Field Name
+										</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input class="tpl-form-input" id="field_name" name="field_name" placeholder="标签字段名称"
+										type="text">
+										<small>
+											分类名称，必须填写
+										</small>
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="tag_type" class="am-u-sm-3 am-form-label">
+										标签类型
+										<span class="tpl-form-line-small-title">
+											Tag Type
+										</span>
+									</label>
+									<div class="am-u-sm-9">
+										<input value="0" id="enum" checked  name="tag_type" type="radio" /><label for="enum">单选</label>
+										<input value="1" id="set" name="tag_type" type="radio" /><label for="set" >多选</label>
+									</div>
+								</div>
+								<div class="am-form-group">
 									<div class="am-u-sm-9 am-u-sm-push-3">
 										{{ csrf_field() }}
 										<input type="hidden" name="pid" value="{{ $pid }}" />

@@ -142,42 +142,6 @@
 									</tbody>
 								</table>
 							</div>
-							<style>
-							    .pagination::after {
-									clear: both;
-								}
-								.pagination::after, .am-pagination::before {
-									content: " ";
-									display: table;
-								}
-								.pagination {
-									position: relative;
-								}
-								.pagination {
-									padding-left: 0;
-									margin: 1.5rem 0;
-									list-style: none;
-									color: #999;
-									text-align: left;
-								}
-								.pagination li{
-									float:left;
-									
-									padding: 3px 10px;
-									margin-right: 10px;
-									background-color: #3F4649;
-								}
-								.pagination li a{
-									color:white;
-								}
-								.pagination .active {
-									color: #FFCE44;
-									border: 1px solid #167fa1;
-									background: #167fa1;
-									
-								}
-
-							</style>
 							<div class="am-u-lg-12 am-cf">
 								<div class="am-fr">
 									{!! $users -> appends(['keywords' => $keywords]) -> render() !!}

@@ -19,13 +19,28 @@ class SystemController extends Controller
         //
         $configs = System::get();
         foreach($configs as $key => $config){
-            switch(){
+            switch($config->system_type){
                 case 'input':
-                    $config[$key]['config'] = '<input class="tpl-form-input" name="system_content[]" type="text" />';
+                    $configs[$key]['system_config'] = '<input class="tpl-form-input" name="system_content[]" style="color:black" type="text"  value="'. $config -> system_content .'"/>';
+                break;
+                case 'img':
+                    $configs[$key]['system_config'] = '<div class="tpl-user-panel-profile-picture"><img src="'. $config -> system_content .'" alt="'. $config -> system_content .'"/></div>';
                 break;
                 case 'textarea':
+                    $configs[$key]['system_config'] = '<textarea  name="system_content[]">'.$config->system_content.'</textarea>';
                 break;
                 case 'radio':
+                    //存放最终要返回的格式化的数据的
+                    $str = '';
+                    $arr = explode(',',$config->system_value);
+                    foreach ($arr as $item) {
+                        $a = explode('|',$item);
+//判断是否需要将被选中这个标签checked添加到当前的元素上
+                        $c =  ($config->system_content == $a[0])?'checked':'';
+//$a = [0=>1,1=>"开启"] ====><input type="radio" name="system_content" value="1" >开启
+                        $str.='<input type="radio" name="system_content"'.$c.' value="'.$a[0].'" >'.$a[1];
+                  }
+                  $configs[$key]['system_config'] = $str;
                 break;
             }
         }
@@ -116,21 +131,26 @@ class SystemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //查询要删除的记录的模型
+        $conf = system::find($id);
+        //执行删除操作
+        $re = $conf->delete();
+
+        //根据返回的结果处理成功和失败
+        if($re){
+            //如果删除成功，更新web.php文件中的配置项
+            return 1;
+        }   else{
+            return 0;
+        }
     }
     public function check(request $request)
     {
-        $res = System::where('system_name',$request -> input('system_name')) -> first();
+        $res = System::where('system_field',$request -> input('system_field')) -> first();
         if($res != false) {
             return 1;
         } else {
             return 0;
         }
-    }
-    public function putFile()
-    {
-        $systemInfo = System::select('system_content','system_name') -> get();
-        //将数据写入文件
-        file_put_contents(base_path().'/config/systemInfo.php',$systemInfo);
     }
 }

@@ -186,7 +186,7 @@
 		var formData = new FormData($('#user_form')[0]);
 		$.ajax({
 			type: "POST",
-			url: "{{ url('admin/user/upload') }}",
+			url: "{{ url('/admin/user/upload') }}",
 			data: formData,
 			contentType: false,
 			processData: false,
